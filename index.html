@@ -1,586 +1,1106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ACE Spaces | Premium Coworking in Mohali &amp; Zirakpur</title>
-<meta name="description" content="Flexible, modern and fully-equipped coworking spaces in Mohali & Zirakpur. Day Pass, Dedicated Desk, Private Cabin and Meeting Rooms. Book a tour today.">
-<meta name="theme-color" content="#0d0b0a">
-<meta property="og:title" content="ACE Spaces | You Bring the Dream. We Make Room for It.">
-<meta property="og:description" content="Premium coworking in Mohali & Zirakpur for innovators, teams and growing businesses.">
-<meta property="og:image" content="images/hero-reception.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 28'%3E%3Cpath d='M15 1 22 13H8z' fill='%23E3192B'/%3E%3Cpath d='M7.5 14.5 14.5 27H.5z' fill='%23E3192B'/%3E%3Cpath d='M22.5 14.5 29.5 27h-14z' fill='%23E3192B'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/wow.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ACE Spaces | Premium Coworking in Mohali &amp; Zirakpur</title>
+  <meta name="description" content="Flexible, modern and fully-equipped coworking spaces in Mohali &amp; Zirakpur for innovators, teams and growing businesses.">
+  <meta name="theme-color" content="#0c0a0a">
+  <link rel="icon" type="image/png" href="assets/images/mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,700;1,9..40,800&amp;family=Poppins:ital,wght@0,500;0,600;0,700;1,400;1,500;1,800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="is-loading">
+<body>
 
-<!-- ================= PRELOADER ================= -->
-<div class="preloader" id="preloader" aria-hidden="true">
-  <div class="pl__in">
-    <svg class="pl__logo" viewBox="0 0 30 28"><path class="t1" d="M15 1 22 13H8z"/><path class="t2" d="M7.5 14.5 14.5 27H.5z"/><path class="t3" d="M22.5 14.5 29.5 27h-14z"/></svg>
-    <p class="pl__name"><span>A</span><span>C</span><span>E</span><span>&nbsp;</span><span>S</span><span>p</span><span>a</span><span>c</span><span>e</span><span>s</span></p>
-    <p class="pl__tag">Work. Collaborate. Grow.</p>
-    <div class="pl__bar"><i id="plBar"></i></div>
-  </div>
-  <div class="pl__curtain pl__curtain--1"></div><div class="pl__curtain pl__curtain--2"></div>
-</div>
-<div class="progress" id="progress" aria-hidden="true"></div>
-<div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__dot"></i><i class="cursor__ring"></i></div>
-
-<!-- ================= ICON SPRITE ================= -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1.2" fill="currentColor"/></symbol>
-    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.6.2 4.5 2 4.5 4.6"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.3-4.4"/></symbol>
-    <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M3 13a2 2 0 0 1 4 0v1h10v-1a2 2 0 0 1 4 0v4H3z"/><path d="M5 17v2M19 17v2"/></symbol>
-    <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 10.5h1.5a2.5 2.5 0 0 1 0 5H17M8 3.5v2.5M12 3.5v2.5"/></symbol>
-    <symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 12.5h18M10.5 12.5v2h3v-2"/></symbol>
-    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M7.5 13.5h2M11 13.5h2M14.5 13.5h2M7.5 16.5h2M11 16.5h2"/></symbol>
-    <symbol id="i-calcheck" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="m9 15 2 2 4-4"/></symbol>
-    <symbol id="i-calstar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="m12 12.3.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2-1.45-1.4 2-.3z"/></symbol>
-    <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></symbol>
-    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-2 2.5-5 2.5"/></symbol>
-    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M6 17v-3M10 17v-6M14 17v-4M18 17V8"/><path d="m5 11 5-4 4 3 6-6M16 4h4v4"/></symbol>
-    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 4.5-9 4.5-9-4.5z"/><path d="m3 12 9 4.5 9-4.5M3 16.5 12 21l9-4.5"/></symbol>
-    <symbol id="i-desk" viewBox="0 0 24 24"><path d="M3 10h18M5 10v9M19 10v9M5 14h6"/><rect x="8" y="4" width="8" height="6" rx="1"/></symbol>
-    <symbol id="i-chair" viewBox="0 0 24 24"><path d="M7 4h10v8H7zM5 12h14v3H5zM8 15v5M16 15v5M12 15v3"/></symbol>
-    <symbol id="i-ac" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="8" rx="2"/><path d="M6 9h12M8 15v1.5M12 15v4M16 15v1.5"/></symbol>
-    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3.5h10V9"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v6.5H7z"/></symbol>
-    <symbol id="i-cctv" viewBox="0 0 24 24"><path d="m3 8 13-4 2 6-13 4z"/><path d="m16 10 3 3-2 2M7 13l1 4H3"/></symbol>
-    <symbol id="i-park" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 17V7h3a3 3 0 0 1 0 6h-3"/></symbol>
-    <symbol id="i-carpark" viewBox="0 0 24 24"><path d="M4 16l1.5-4.5A2 2 0 0 1 7.4 10h9.2a2 2 0 0 1 1.9 1.5L20 16"/><rect x="3" y="16" width="18" height="3.5" rx="1"/><circle cx="12" cy="6" r="3.5"/><path d="M11 8V4.5h1.3a1.2 1.2 0 0 1 0 2.4H11"/></symbol>
-    <symbol id="i-food" viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 2 2v9M4 3v5M8 3v5M15 21V3c2.5 1 4 3.5 4 7s-1.5 4-4 4"/></symbol>
-    <symbol id="i-broom" viewBox="0 0 24 24"><path d="m14 4 6-1-1 6M19.5 3.5l-7 7"/><path d="M12.5 10.5 9 7l-5 8 5 5 8-5z"/><path d="M6.5 17.5l3-3"/></symbol>
-    <symbol id="i-meet" viewBox="0 0 24 24"><circle cx="7" cy="7" r="2"/><circle cx="17" cy="7" r="2"/><circle cx="12" cy="5.5" r="2"/><path d="M3 13h18v2H3zM6 15v5M18 15v5M4 12c0-1.6 1.3-2.5 3-2.5s3 .9 3 2.5M14 12c0-1.6 1.3-2.5 3-2.5s3 .9 3 2.5"/></symbol>
-    <symbol id="i-present" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8M7 12l3-3 2 2 4-4"/></symbol>
-    <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 18 3-18"/></symbol>
-    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></symbol>
-    <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M15 9h4a1 1 0 0 1 1 1v11M2 21h20"/><path d="M8 8h3M8 12h3M8 16h3"/></symbol>
-    <symbol id="i-hand" viewBox="0 0 24 24"><path d="m2 12 4-4 4 1 3-2 5 1 4 4"/><path d="m6 8 6 6a1.5 1.5 0 0 0 2-2M9.5 15.5l1.5 1.5a1.5 1.5 0 0 0 2-2M8 17l1 1a1.5 1.5 0 0 0 2-2M2 12l5 5M22 12l-4 4-2-1"/></symbol>
-    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
-    <symbol id="i-crown" viewBox="0 0 24 24"><path d="m3 8 4.5 4L12 5l4.5 7L21 8l-2 11H5z"/></symbol>
-    <symbol id="i-door" viewBox="0 0 24 24"><path d="M5 21V3h11v18M3 21h18M16 5l3 1v15"/><circle cx="13" cy="12" r=".9" fill="currentColor"/></symbol>
-    <symbol id="i-qa" viewBox="0 0 24 24"><path d="M4 4h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M8.2 7.8a1.9 1.9 0 1 1 2.6 1.8c-.5.2-.8.6-.8 1.1v.3"/><circle cx="10" cy="12.6" r=".6" fill="currentColor"/><path d="M20 9a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1v3l-4-3h-3"/></symbol>
-    <symbol id="i-calclock" viewBox="0 0 24 24"><path d="M11 20.5H6a2.5 2.5 0 0 1-2.5-2.5V7.5A2.5 2.5 0 0 1 6 5h12a2.5 2.5 0 0 1 2.5 2.5V11M3.5 10h17M8 3v4M16 3v4"/><circle cx="17" cy="17" r="4"/><path d="M17 15.3V17l1.2.8"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-arrowup" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
-    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
-    <symbol id="i-chevdown" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
-    <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M10 8.5v7l5.5-3.5z" fill="currentColor"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="m8 12 2.8 2.8L16 9.5"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l2 5-2.5 1.5a11 11 0 0 0 5.5 5.5L15 13.5l5 2V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></symbol>
-    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
-    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></symbol>
-    <symbol id="i-in" viewBox="0 0 24 24"><path d="M6 10v8M6 6.5v.1M10.5 18v-8M10.5 13.5c0-2 1.3-3.5 3.2-3.5s2.8 1.3 2.8 3.5V18" stroke-width="2.4"/></symbol>
-    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 21v-8h3l.5-3.5H14V7.8c0-1 .3-1.8 1.8-1.8h1.8V3a24 24 0 0 0-2.6-.1c-2.6 0-4.3 1.6-4.3 4.5v2.1H8V13h2.7v8z" fill="currentColor" stroke="none"/></symbol>
-    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.2A8.6 8.6 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.2 2.8 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2.3-1.6-2.8-2.8l.8-1-1-2z" fill="currentColor" stroke="none"/></symbol>
-    <symbol id="i-quote" viewBox="0 0 32 24"><path d="M0 24V14C0 6 4 1 12 0v5c-4 1-6 4-6 8h6v11zm18 0V14c0-8 4-13 12-14v5c-4 1-6 4-6 8h6v11z" fill="currentColor" stroke="none"/></symbol>
-    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
-    <symbol id="logo3" viewBox="0 0 30 28"><path d="M15 1 22 13H8z" fill="currentColor" stroke="none"/><path d="M7.5 14.5 14.5 27H.5z" fill="currentColor" stroke="none"/><path d="M22.5 14.5 29.5 27h-14z" fill="currentColor" stroke="none"/></symbol>
-    <symbol id="logoA" viewBox="0 0 40 34"><path d="M20 0 40 34H30.5L20 15.5 9.5 34H0z" fill="currentColor" stroke="none"/><path d="M14.5 34 20 24.5 25.5 34z" fill="currentColor" stroke="none" opacity=".55"/></symbol>
-  </defs>
+<!-- ============ SVG ICON SPRITE ============ -->
+<svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.6a10 10 0 0 1 14 0M8.5 16.3a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="3.2"/><circle cx="5.5" cy="9.5" r="2.2"/><circle cx="18.5" cy="9.5" r="2.2"/><path d="M6.5 20v-1.5a5.5 5.5 0 0 1 11 0V20zM2 19v-.5a3.5 3.5 0 0 1 4-3.4M22 19v-.5a3.5 3.5 0 0 0-4-3.4"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 10h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 11h1.5a2.5 2.5 0 0 1 0 5H17M3 21h16M8 3.5c-.6.8.6 1.6 0 2.5M11 3.5c-.6.8.6 1.6 0 2.5M14 3.5c-.6.8.6 1.6 0 2.5"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 12h18M10 12v2h4v-2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.5l8 3v6c0 5-3.4 9.2-8 10.8-4.6-1.6-8-5.8-8-10.8v-6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M5 11V8.5A2.5 2.5 0 0 1 7.5 6h9A2.5 2.5 0 0 1 19 8.5V11"/><path d="M3 13a2 2 0 0 1 4 0v1h10v-1a2 2 0 0 1 4 0v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zM6 18v1.5M18 18v1.5"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4M7 13.5h2M11 13.5h2M15 13.5h2M7 17h2M11 17h2"/></symbol>
+  <symbol id="i-calendar-check" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4M8.5 15l2.5 2.5 4.5-4.5"/></symbol>
+  <symbol id="i-calendar-star" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M12 12.5l1.1 2.2 2.4.3-1.7 1.7.4 2.4-2.2-1.1-2.2 1.1.4-2.4-1.7-1.7 2.4-.3z"/></symbol>
+  <symbol id="i-calendar-clock" viewBox="0 0 24 24"><path d="M11 21H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4M3 10h18M8 3v4M16 3v4"/><circle cx="17" cy="17" r="4"/><path d="M17 15.5V17l1 1"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 20v-3M9 20v-6M13 20v-8M17 20v-11M3 14l7-6 3 3 7-7M15.5 4H20v4.5"/></symbol>
+  <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 2-2 2.5-4.5 2.5H12"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5zM3 12l9 5 9-5M3 16l9 5 9-5"/></symbol>
+  <symbol id="i-desk" viewBox="0 0 24 24"><path d="M2 9h20M4 9v11M20 9v11"/><rect x="13" y="12" width="7" height="5" rx=".5"/><path d="M8 3h8v6H8z"/></symbol>
+  <symbol id="i-meeting" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="9" r="1.7"/><circle cx="19" cy="9" r="1.7"/><path d="M3 13h18v2H3zM6 15v5M18 15v5M12 15v3M9 10.5a3 3 0 0 1 6 0"/></symbol>
+  <symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V3h12v6"/><rect x="2.5" y="9" width="19" height="9" rx="2"/><path d="M6 14h12v7H6zM17.5 12h.5"/></symbol>
+  <symbol id="i-broom" viewBox="0 0 24 24"><path d="M20 3l-7.5 7.5M12.5 10.5l1.5 1.5-3 3c-1 1-3 3-6.5 6.5 0 0 1-4 2-5.5s2-2.5 3-3zM8 16l2 2M4 4v3M2.5 5.5h3M18 15v3M16.5 16.5h3"/></symbol>
+  <symbol id="i-parking" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M10 17V7h3a3 3 0 0 1 0 6h-3"/></symbol>
+  <symbol id="i-cctv" viewBox="0 0 24 24"><path d="M3 9l13-5 2 5-13 5zM18 9l3 1-1 3-3-1M8 13l1 4H4v3"/></symbol>
+  <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M5 3v7a2 2 0 0 0 2 2v9M9 3v7a2 2 0 0 1-2 2M7 3v6M17 21V3c-2 1-3 4-3 7v3h3"/></symbol>
+  <symbol id="i-aircon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="8" rx="2"/><path d="M6 9h12M8 15c0 1.5-1 2-1 3.5M12 15v4M16 15c0 1.5 1 2 1 3.5M9 21h6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M7.5 12.5l3 3 6-6.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-chev-d" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".8" fill="currentColor"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M6 9.5V19M6 5.5v.01M10.5 19v-9.5M10.5 13.5a3.5 3.5 0 0 1 7 0V19"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 21v-8h3l.5-3.5H14V7.8c0-1 .3-1.8 1.8-1.8h1.8V3.1A24 24 0 0 0 15 3c-2.6 0-4.3 1.6-4.3 4.4v2.1H8V13h2.7v8"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.4A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c0 3.5 2.8 6.5 6.5 6.5l1-1.5-2-1-1 1c-1.2-.5-2.3-1.6-2.8-2.8l1-1-1-2z"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9h5v12M10 21V4h7v17M17 21v-9h3v9M7 12h1M7 15h1M13 7h1M13 10h1M13 13h1"/></symbol>
+  <symbol id="i-office" viewBox="0 0 24 24"><rect x="5" y="3" width="10" height="18" rx="1"/><path d="M15 9h4v12h-4M8 7h1M11 7h1M8 10.5h1M11 10.5h1M8 14h1M11 14h1M9 21v-3h2v3"/></symbol>
+  <symbol id="i-handshake" viewBox="0 0 24 24"><path d="M2 11l4-4 4 1 3-2 3 1 6 5-3 3"/><path d="M6 7l-4 4 3 3M8.5 13.5l2 2M10.5 11.5l3 3M12.5 9.5l3.5 3.5a1.4 1.4 0 0 1-2 2l-1-1M5 14l3.5 3.5a1.4 1.4 0 0 0 2-2"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/><path d="M12 8l-1.5 3h3L12 14"/></symbol>
+  <symbol id="i-grow" viewBox="0 0 24 24"><path d="M3 21h18M5 21v-5h3v5M10.5 21v-8h3v8M16 21v-11h3v11M4 11l5-4 3 2 7-6M15 3h4v4"/></symbol>
+  <symbol id="i-crown" viewBox="0 0 24 24"><path d="M3 7l4.5 4L12 5l4.5 6L21 7l-2 11H5zM5 21h14"/></symbol>
+  <symbol id="i-diamond" viewBox="0 0 24 24"><path d="M6 4h12l4 5-10 12L2 9zM2 9h20M9 4l-2 5 5 12 5-12-2-5"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M4 21h16M6 21V4a1 1 0 0 1 1-1h7l4 2v16M14 3v18M11 12v1"/></symbol>
+  <symbol id="i-question" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L4 20.5l1.4-4.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M10 9.5a2.5 2.5 0 1 1 3.4 2.3c-.8.3-1.4 1-1.4 1.9v.3M12 16.5v.01"/></symbol>
+  <symbol id="i-presentation" viewBox="0 0 24 24"><rect x="3" y="3.5" width="18" height="12" rx="1"/><path d="M6.5 12l3.5-3.5 2.5 2.5 4.5-4.5M12 15.5v3M8 21l4-2.5 4 2.5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M10 8.5v7l5.5-3.5z" fill="currentColor"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M10 6c-3.5 1.2-6 4-6 8v4h6v-6H7c0-2.2 1.3-3.8 3.6-4.5zM20 6c-3.5 1.2-6 4-6 8v4h6v-6h-3c0-2.2 1.3-3.8 3.6-4.5z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></symbol>
 </svg>
 
-<!-- ================= 1. HERO ================= -->
-<header class="nav" id="nav">
-  <div class="nav__in">
-    <a href="#top" class="brand" aria-label="ACE Spaces home">
-      <svg class="brand__mark"><use href="#logo3"/></svg>
-      <span class="brand__name">ACE Spaces</span>
-      <span class="brand__sep" aria-hidden="true"></span>
-      <span class="brand__tag">Premium Coworking <br>Mohali &amp; Zirakpur</span>
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="brand" href="#home" aria-label="ACE Spaces home">
+      <img src="assets/images/logo-white.png" alt="ACE Spaces" width="174" height="40">
+      <span class="brand-tag">PREMIUM COWORKING<br>MOHALI &amp; ZIRAKPUR</span>
     </a>
-    <nav class="nav__links" aria-label="Main">
-      <a href="#top" class="is-active">Home</a>
+    <nav class="main-nav" id="mainNav" aria-label="Main">
+      <a href="#home" class="is-active">Home</a>
       <a href="#spaces">Spaces</a>
       <a href="#locations">Locations</a>
       <a href="#why">About</a>
       <a href="#contact">Contact</a>
+      <a href="tel:+919876543210" class="nav-call" aria-label="Call ACE Spaces"><svg class="ic"><use href="#i-phone"/></svg></a>
+      <a href="#visit" class="btn btn-red btn-sm">Book a Tour <svg class="ic"><use href="#i-arrow-ur"/></svg></a>
     </nav>
-    <div class="nav__right">
-      <a href="tel:+919876543210" class="nav__call" aria-label="Call ACE Spaces"><svg><use href="#i-phone"/></svg></a>
-      <a href="#" class="btn btn--red js-open-visit">Book a Tour <svg class="ic-sm"><use href="#i-arrowup"/></svg></a>
-      <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-  <div class="drawer" id="drawer">
-    <a href="#top">Home</a><a href="#spaces">Spaces</a><a href="#locations">Locations</a><a href="#amenities">Amenities</a><a href="#membership">Membership</a><a href="#community">Community</a><a href="#faq">FAQs</a><a href="#contact">Contact</a>
-    <a href="#" class="btn btn--red js-open-visit">Book a Tour <svg class="ic-sm"><use href="#i-arrowup"/></svg></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><svg class="ic"><use href="#i-menu"/></svg></button>
   </div>
 </header>
 
 <main>
-<section class="hero" id="top">
-  <div class="hero__bg" style="background-image:url(images/hero-reception.jpg)" aria-hidden="true"></div>
-  <div class="hero__shade" aria-hidden="true"></div>
-  <canvas class="hero__dust" id="dust" aria-hidden="true"></canvas>
-  <div class="hero__spot" aria-hidden="true"></div>
-  <div class="wrap hero__in">
-    <div class="hero__card">
-      <span class="hero__glowline" aria-hidden="true"></span>
-      <p class="pill-gold ld" style="--i:0"><svg><use href="#i-building"/></svg>Premium Coworking in Mohali &amp; Zirakpur</p>
-      <h1 class="hero__h1">
-        <span class="split" data-delay="0.35">You Bring</span>
-        <span class="split split--gold" data-delay="0.75"><em class="gold-text">the Dream.</em></span>
-      </h1>
-      <p class="hero__script ld" style="--i:3">We Make Room for It.<svg class="swoosh" viewBox="0 0 140 12" aria-hidden="true"><path d="M2 9C40 2 95 1 138 7"/></svg></p>
-      <p class="hero__lead ld" style="--i:4">Flexible, modern and fully-equipped coworking spaces for innovators, teams and growing businesses.</p>
-      <div class="hero__btns ld" style="--i:5">
-        <a href="#spaces" class="btn btn--red">Explore Spaces <svg class="ic-sm"><use href="#i-arrowup"/></svg></a>
-        <button type="button" class="btn btn--gline" id="watchTour"><svg><use href="#i-play"/></svg>Watch Tour</button>
-      </div>
-      <ul class="hero__side">
-        <li class="ld" style="--i:4"><span class="ic-gold"><svg><use href="#i-users"/></svg></span>Flexible <br>Workspaces</li>
-        <li class="ld" style="--i:5"><span class="ic-gold"><svg><use href="#i-cup"/></svg></span>Café &amp; <br>Lounge</li>
-        <li class="ld" style="--i:6"><span class="ic-gold"><svg><use href="#i-brief"/></svg></span>Meeting &amp; <br>Conference <br>Rooms</li>
-      </ul>
+
+<!-- ============ 1. HERO ============ -->
+<section class="section hero" id="home">
+  <div class="exact reveal" style="--h: 746; --edge: #1e1a14">
+    <div class="exact-stage">
+<div style="position: relative; width: 1920px; height: 746px; overflow: hidden; background: #0c0a0a; font-family: 'Barlow Semi Condensed', sans-serif; color: #fff">
+
+  <img src="assets/images/bg-hero.jpg" alt="ACE Spaces reception lounge with warm ring lights, marble desk and sofa, framed by glowing gold panels" class="exact-bg" width="1920" height="746">
+
+  <!-- badge -->
+  <div style="position: absolute; left: 385px; top: 98px; height: 34px; width: 352px; box-sizing: border-box; border-radius: 17px; border: 1px solid rgba(245,184,61,0.45); background: rgba(255,255,255,0.03); display: flex; align-items: center; gap: 12px; padding-left: 14px; font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 600; font-size: 14.5px; letter-spacing: 0.3px; white-space: nowrap; color: #fff">
+    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" style="flex-shrink: 0" fill="none" stroke="#f5b83d" stroke-width="1.9" stroke-linejoin="round"><path d="M3 21h18M5 21V9h5v12M10 21V4h7v17M17 21v-9h3v9"></path><path d="M7 12h1M7 15h1M13 7h1M13 10h1M13 13h1"></path></svg>
+    PREMIUM COWORKING IN MOHALI &amp; ZIRAKPUR
+  </div>
+
+  <!-- headline -->
+  <h1 style="position: absolute; left: 384px; top: 146px; margin: 0; font-family: Poppins, sans-serif; font-weight: 700; font-size: 58px; line-height: 64px; letter-spacing: -1.5px; color: #fff">You Bring</h1>
+  <div style="position: absolute; left: 380px; top: 202px; font-family: Poppins, sans-serif; font-weight: 800; font-style: italic; font-size: 65px; line-height: 76px; letter-spacing: -1.8px; background: linear-gradient(180deg, #ffe08a 0%, #f7b733 55%, #e09a1f 100%); -webkit-background-clip: text; background-clip: text; color: transparent">the Dream.</div>
+  <div style="position: absolute; left: 384px; top: 276px; font-family: Poppins, sans-serif; font-weight: 400; font-style: italic; font-size: 32px; line-height: 44px; letter-spacing: -0.3px; color: #fff">We Make Room for It.</div>
+  <svg aria-hidden="true" width="160" height="16" viewBox="0 0 160 16" style="position: absolute; left: 566px; top: 316px"><path d="M2 12 Q 70 0 158 9" fill="none" stroke="#e3141f" stroke-width="2.6" stroke-linecap="round"></path></svg>
+
+  <!-- paragraph -->
+  <div style="position: absolute; left: 372px; top: 350px; width: 4px; height: 40px; border-radius: 2px; background: #f5b83d"></div>
+  <p style="position: absolute; left: 390px; top: 348px; width: 385px; margin: 0; font-size: 17px; line-height: 22px; color: #f1ece6">Flexible, modern and fully-equipped coworking spaces for innovators, teams and growing businesses.</p>
+
+  <!-- CTAs -->
+  <a href="#spaces" style="position: absolute; left: 374px; top: 414px; width: 178px; height: 46px; box-sizing: border-box; border-radius: 8px; background: linear-gradient(180deg, #f2232f, #d10d19); display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 18.5px; font-weight: 500; color: #fff; box-shadow: 0 6px 22px rgba(227,20,31,0.4)">Explore Spaces <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+  <a href="#faq" style="position: absolute; left: 573px; top: 414px; width: 165px; height: 46px; box-sizing: border-box; border-radius: 23px; border: 1.5px solid rgba(245,184,61,0.7); display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 18.5px; font-weight: 500; color: #fff"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="10"></circle><path d="M10 8.5v7l5.5-3.5z" fill="#fff"></path></svg>Watch Tour</a>
+
+  <!-- side features -->
+  <div style="position: absolute; left: 768px; top: 157px; display: flex; flex-direction: column; gap: 22px">
+    <div style="display: flex; align-items: center; gap: 13px">
+      <div style="width: 52px; height: 52px; border-radius: 10px; border: 1px solid rgba(245,184,61,0.4); background: linear-gradient(180deg, #33281c, #1a1510); box-shadow: inset 0 1px 0 rgba(255,210,120,0.15); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#f5b83d" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="8" r="3"></circle><circle cx="5.5" cy="10" r="2.2"></circle><circle cx="18.5" cy="10" r="2.2"></circle><path d="M6.5 19v-1a5.5 5.5 0 0 1 11 0v1z"></path><path d="M2 18.5v-.5a3.5 3.5 0 0 1 4-3.4M22 18.5v-.5a3.5 3.5 0 0 0-4-3.4"></path></svg></div>
+      <div style="font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 18px; font-weight: 600; letter-spacing: -0.3px; color: #fff">Flexible<br>Workspaces</div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 13px">
+      <div style="width: 52px; height: 52px; border-radius: 10px; border: 1px solid rgba(245,184,61,0.4); background: linear-gradient(180deg, #33281c, #1a1510); box-shadow: inset 0 1px 0 rgba(255,210,120,0.15); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#f5b83d" stroke-width="1.9" stroke-linecap="round"><path d="M4 10h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"></path><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"></path><path d="M3 21h16"></path><path d="M8 3v3M11.5 3v3"></path></svg></div>
+      <div style="font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 18px; font-weight: 600; letter-spacing: -0.3px; color: #fff">Café &amp;<br>Lounge</div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 13px">
+      <div style="width: 52px; height: 52px; border-radius: 10px; border: 1px solid rgba(245,184,61,0.4); background: linear-gradient(180deg, #33281c, #1a1510); box-shadow: inset 0 1px 0 rgba(255,210,120,0.15); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#f5b83d" stroke-width="1.9" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path><path d="M3 12h18"></path><path d="M10 12v2h4v-2"></path></svg></div>
+      <div style="font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 18px; font-weight: 600; letter-spacing: -0.3px; color: #fff">Meeting &amp;<br>Conference<br>Rooms</div>
     </div>
   </div>
-  <div class="wrap">
-    <ul class="hero__bar ld" style="--i:7">
-      <li><span class="ic-gold"><svg><use href="#i-wifi"/></svg></span><span><b>High-Speed <br>Internet</b><small>Reliable &amp; Fast</small></span></li>
-      <li><span class="ic-gold"><svg><use href="#i-users"/></svg></span><span><b>Flexible <br>Plans</b><small>For Individuals &amp; Teams</small></span></li>
-      <li><span class="ic-gold"><svg><use href="#i-pin"/></svg></span><span><b>Prime <br>Locations</b><small>Mohali &amp; Zirakpur</small></span></li>
-      <li><span class="ic-gold"><svg><use href="#i-shield"/></svg></span><span><b>Secure &amp; <br>Professional</b><small>24/7 Access &amp; Support</small></span></li>
-      <li><span class="ic-gold"><svg><use href="#i-sofa"/></svg></span><span><b>Premium <br>Amenities</b><small>Café, Lounge &amp; More</small></span></li>
+
+  <!-- bottom feature bar -->
+  <div style="position: absolute; left: 405px; top: 548px; width: 1110px; height: 118px; box-sizing: border-box; border-radius: 26px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; padding: 0 18px">
+    <div style="display: flex; align-items: center; gap: 14px; padding-left: 12px; border-right: 1px solid rgba(255,255,255,0.12)">
+      <div style="width: 56px; height: 58px; flex-shrink: 0; border-radius: 12px; background: linear-gradient(180deg, #2a2219, #15110e); border: 1px solid rgba(245,184,61,0.25); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#f5b83d" stroke-width="1.8" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"></path><path d="M5 12.6a10 10 0 0 1 14 0"></path><path d="M8.5 16.3a5 5 0 0 1 7 0"></path><circle cx="12" cy="19.5" r="0.9" fill="#f5b83d"></circle></svg></div>
+      <div><div style="font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; line-height: 21px; letter-spacing: -0.4px">High-Speed<br>Internet</div><div style="margin-top: 6px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: -0.35px; white-space: nowrap; color: #e4ddd4">Reliable &amp; Fast</div></div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 14px; padding-left: 14px; border-right: 1px solid rgba(255,255,255,0.12)">
+      <div style="width: 56px; height: 58px; flex-shrink: 0; border-radius: 12px; background: linear-gradient(180deg, #2a2219, #15110e); border: 1px solid rgba(245,184,61,0.25); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#f5b83d" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="8" r="3"></circle><circle cx="5.5" cy="10" r="2.2"></circle><circle cx="18.5" cy="10" r="2.2"></circle><path d="M6.5 19v-1a5.5 5.5 0 0 1 11 0v1z"></path><path d="M2 18.5v-.5a3.5 3.5 0 0 1 4-3.4M22 18.5v-.5a3.5 3.5 0 0 0-4-3.4"></path></svg></div>
+      <div><div style="font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; line-height: 21px; letter-spacing: -0.4px">Flexible<br>Plans</div><div style="margin-top: 6px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: -0.35px; white-space: nowrap; color: #e4ddd4">For Individuals &amp; Teams</div></div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 14px; padding-left: 14px; border-right: 1px solid rgba(255,255,255,0.12)">
+      <div style="width: 56px; height: 58px; flex-shrink: 0; border-radius: 12px; background: linear-gradient(180deg, #2a2219, #15110e); border: 1px solid rgba(245,184,61,0.25); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#f5b83d" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.6"></circle></svg></div>
+      <div><div style="font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; line-height: 21px; letter-spacing: -0.4px">Prime<br>Locations</div><div style="margin-top: 6px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: -0.35px; white-space: nowrap; color: #e4ddd4">Mohali &amp; Zirakpur</div></div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 14px; padding-left: 14px; border-right: 1px solid rgba(255,255,255,0.12)">
+      <div style="width: 56px; height: 58px; flex-shrink: 0; border-radius: 12px; background: linear-gradient(180deg, #2a2219, #15110e); border: 1px solid rgba(245,184,61,0.25); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#f5b83d" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z"></path><path d="M8.5 12l2.5 2.5 4.5-5"></path></svg></div>
+      <div><div style="font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; line-height: 21px; letter-spacing: -0.4px">Secure &amp;<br>Professional</div><div style="margin-top: 6px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: -0.35px; white-space: nowrap; color: #e4ddd4">24/7 Access &amp; Support</div></div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 14px; padding-left: 14px">
+      <div style="width: 56px; height: 58px; flex-shrink: 0; border-radius: 12px; background: linear-gradient(180deg, #2a2219, #15110e); border: 1px solid rgba(245,184,61,0.25); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#f5b83d" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3"></path><path d="M3 13a2 2 0 0 1 4 0v1h10v-1a2 2 0 0 1 4 0v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path><path d="M6 18v2M18 18v2"></path></svg></div>
+      <div><div style="font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; line-height: 21px; letter-spacing: -0.4px">Premium<br>Amenities</div><div style="margin-top: 6px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: -0.35px; white-space: nowrap; color: #e4ddd4">Café, Lounge &amp; More</div></div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="fluid">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-photo reveal" data-delay="2">
+      <img src="assets/images/hero-lounge.jpg" alt="ACE Spaces reception lounge with warm ring lights, marble desk and sofa" width="710" height="515">
+    </div>
+    <div class="hero-panel reveal">
+      <span class="pill-badge"><svg class="ic"><use href="#i-building"/></svg>PREMIUM COWORKING IN MOHALI &amp; ZIRAKPUR</span>
+      <h1 class="hero-title">You Bring<br><span class="text-gold">the Dream.</span></h1>
+      <p class="hero-sub">We Make Room <span class="underline-red">for It.</span></p>
+      <p class="hero-text">Flexible, modern and fully-equipped coworking spaces for innovators, teams and growing businesses.</p>
+      <div class="btn-row">
+        <a href="#spaces" class="btn btn-red btn-shine">Explore Spaces <svg class="ic"><use href="#i-arrow-ur"/></svg></a>
+        <a href="#locations" class="btn btn-outline-gold"><svg class="ic ic-lg"><use href="#i-play"/></svg>Watch Tour</a>
+      </div>
+    </div>
+    <ul class="hero-points reveal" data-delay="1">
+      <li><span class="tile tile-gold"><svg class="ic"><use href="#i-users"/></svg></span>Flexible<br>Workspaces</li>
+      <li><span class="tile tile-gold"><svg class="ic"><use href="#i-cup"/></svg></span>Café &amp;<br>Lounge</li>
+      <li><span class="tile tile-gold"><svg class="ic"><use href="#i-briefcase"/></svg></span>Meeting &amp;<br>Conference Rooms</li>
     </ul>
   </div>
-  <svg class="hero__wave" viewBox="0 0 1920 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 110C420 30 760 20 960 70s560 40 960-60"/></svg>
+  <div class="container">
+    <ul class="feature-bar bar-gold reveal">
+      <li><span class="tile tile-gold"><svg class="ic"><use href="#i-wifi"/></svg></span><div><strong>High-Speed<br>Internet</strong><small>Reliable &amp; Fast</small></div></li>
+      <li><span class="tile tile-gold"><svg class="ic"><use href="#i-users"/></svg></span><div><strong>Flexible<br>Plans</strong><small>For Individuals &amp; Teams</small></div></li>
+      <li><span class="tile tile-gold"><svg class="ic"><use href="#i-pin"/></svg></span><div><strong>Prime<br>Locations</strong><small>Mohali &amp; Zirakpur</small></div></li>
+      <li><span class="tile tile-gold"><svg class="ic"><use href="#i-shield"/></svg></span><div><strong>Secure &amp;<br>Professional</strong><small>24/7 Access &amp; Support</small></div></li>
+      <li><span class="tile tile-gold"><svg class="ic"><use href="#i-sofa"/></svg></span><div><strong>Premium<br>Amenities</strong><small>Café, Lounge &amp; More</small></div></li>
+    </ul>
+  </div>
+  <div class="swoosh swoosh-gold" aria-hidden="true"></div>
+  </div>
 </section>
 
-<!-- ================= 2. WHY ================= -->
-<section class="why light" id="why">
-  <div class="why__arc" aria-hidden="true"></div>
-  <div class="wrap why__grid">
-    <div class="why__copy rv">
-      <p class="eyebrow">Why ACE Spaces</p>
-      <h2 class="h2">More Than a Workspace, <br>A <em class="red">Growth Partner</em> for <br><em class="red">Your Business.</em><svg class="swoosh swoosh--red" viewBox="0 0 180 12" aria-hidden="true"><path d="M2 10C50 3 120 1 178 6"/></svg></h2>
+<!-- ============ 2. WHY ACE ============ -->
+<section class="section light why" id="why">
+  <div class="exact reveal" style="--h: 702; --edge: #f9f5f4">
+    <div class="exact-stage">
+<div style="position: relative; width: 1920px; height: 702px; overflow: hidden; background: #f7f0ee; font-family: 'DM Sans', sans-serif; color: #141414">
+  <img src="assets/images/bg-why.jpg" alt="" class="exact-bg" width="1920" height="702">
+
+  <!-- left copy -->
+  <div style="position: absolute; left: 404px; top: 88px; width: 44px; height: 3px; border-radius: 2px; background: #e3141f"></div>
+  <div style="position: absolute; left: 467px; top: 80px; font-size: 15px; line-height: 20px; font-weight: 800; letter-spacing: 0.2px; color: #1a1a1a">WHY ACE SPACES</div>
+
+  <h2 style="position: absolute; left: 403px; top: 113px; width: 480px; margin: 0; font-size: 41px; line-height: 46px; font-weight: 700; letter-spacing: -1.3px; color: #141414">More Than a Workspace,<br>A <span style="color: #e3141f; font-style: italic; font-weight: 800">Growth Partner</span> for<br><span style="color: #e3141f; font-style: italic; font-weight: 800">Your Business.</span></h2>
+  <svg aria-hidden="true" width="200" height="20" viewBox="0 0 200 20" style="position: absolute; left: 532px; top: 257px"><path d="M3 17 C 60 4, 130 2, 197 8" fill="none" stroke="#e3141f" stroke-width="3" stroke-linecap="round"></path></svg>
+
+  <p style="position: absolute; left: 404px; top: 283px; width: 440px; margin: 0; font-size: 18.5px; line-height: 24.5px; font-weight: 400; letter-spacing: -0.2px; color: #222">Flexible, professional, fully-equipped workspaces<br>for startups, teams, and growing businesses<br>in Mohali &amp; Zirakpur.</p>
+
+  <a href="#faq" style="position: absolute; left: 404px; top: 392px; width: 348px; height: 56px; border-radius: 28px; display: flex; align-items: center; padding-left: 36px; box-sizing: border-box; gap: 18px; font-size: 20px; font-weight: 600; letter-spacing: -0.2px; color: #fff">
+    <svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" style="flex-shrink: 0" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path><path d="M7.5 13.5h2M11 13.5h2M14.5 13.5h2M7.5 16.5h2M11 16.5h2"></path></svg>
+    Choose Your Space
+    <span style="position: absolute; left: 298px; top: 7px; width: 42px; height: 42px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(120,0,0,0.25)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e3141f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+  </a>
+
+  <!-- card icons -->
+  <svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" style="position: absolute; left: 915px; top: 126px" fill="none" stroke="#e3141f" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>
+  <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" style="position: absolute; left: 870px; top: 257px" fill="none" stroke="#e3141f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="11" rx="1.5"></rect><path d="M2 19h20"></path></svg>
+  <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" style="position: absolute; left: 891px; top: 394px" fill="none" stroke="#e3141f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20v-3M9 20v-6M13 20v-8M17 20v-11"></path><path d="M3 14 L10 8 L13 11 L20 4"></path><path d="M15.5 4H20v4.5"></path></svg>
+  <svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" style="position: absolute; left: 1336px; top: 125px" fill="none" stroke="#e3141f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+  <svg aria-hidden="true" width="42" height="42" viewBox="0 0 24 24" style="position: absolute; left: 1370px; top: 256px" fill="none" stroke="#e3141f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"></path><rect x="3" y="13" width="4" height="6" rx="1.5"></rect><rect x="17" y="13" width="4" height="6" rx="1.5"></rect><path d="M19 19c0 2-2 2.5-4.5 2.5H12"></path><path d="M10 15.5c1 .8 3 .8 4 0"></path></svg>
+  <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" style="position: absolute; left: 1341px; top: 391px" fill="none" stroke="#e3141f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"></path><path d="M3 12l9 5 9-5"></path><path d="M3 16l9 5 9-5"></path></svg>
+
+  <!-- card text -->
+  <div style="position: absolute; left: 974px; top: 109px; width: 110px">
+    <div style="font-size: 17px; line-height: 18.5px; font-weight: 700; letter-spacing: -0.4px; white-space: nowrap">Flexible<br>Plans</div>
+    <div style="margin-top: 5px; font-size: 12.2px; line-height: 15.5px; letter-spacing: -0.25px; white-space: nowrap; color: #333">Spaces that fit<br>your way of working.</div>
+  </div>
+  <div style="position: absolute; left: 934px; top: 241px; width: 115px">
+    <div style="font-size: 17px; line-height: 18.5px; font-weight: 700; letter-spacing: -0.4px; white-space: nowrap">Professional<br>Environment</div>
+    <div style="margin-top: 5px; font-size: 12.2px; line-height: 15.5px; letter-spacing: -0.25px; white-space: nowrap; color: #333">Modern, focused<br>and fully-equipped.</div>
+  </div>
+  <div style="position: absolute; left: 957px; top: 377px; width: 128px">
+    <div style="font-size: 17px; line-height: 18.5px; font-weight: 700; letter-spacing: -0.4px; white-space: nowrap">Boost<br>Productivity</div>
+    <div style="margin-top: 5px; font-size: 12.2px; line-height: 15.5px; letter-spacing: -0.25px; white-space: nowrap; color: #333">A distraction-free<br>setup to do your best.</div>
+  </div>
+  <div style="position: absolute; left: 1397px; top: 109px; width: 125px">
+    <div style="font-size: 17px; line-height: 18.5px; font-weight: 700; letter-spacing: -0.4px; white-space: nowrap">Prime<br>Locations</div>
+    <div style="margin-top: 5px; font-size: 12.2px; line-height: 15.5px; letter-spacing: -0.25px; white-space: nowrap; color: #333">Strategically located<br>in Mohali &amp; Zirakpur.</div>
+  </div>
+  <div style="position: absolute; left: 1434px; top: 241px; width: 118px">
+    <div style="font-size: 17px; line-height: 18.5px; font-weight: 700; letter-spacing: -0.4px; white-space: nowrap">Dedicated<br>Support</div>
+    <div style="margin-top: 5px; font-size: 12.2px; line-height: 15.5px; letter-spacing: -0.25px; white-space: nowrap; color: #333">A responsive team<br>that’s always there.</div>
+  </div>
+  <div style="position: absolute; left: 1407px; top: 377px; width: 142px">
+    <div style="font-size: 17px; line-height: 18.5px; font-weight: 700; letter-spacing: -0.4px; white-space: nowrap">Scalable<br>Solutions</div>
+    <div style="margin-top: 5px; font-size: 12.2px; line-height: 15.5px; letter-spacing: -0.25px; white-space: nowrap; color: #333">From solo to team spaces,<br>scale as you grow.</div>
+  </div>
+
+  <!-- center logo -->
+  <img src="assets/images/mark.png" alt="" style="position: absolute; left: 1169px; top: 227px; width: 64px; height: 62px">
+  <img src="assets/images/wordmark-dark.png" alt="ACE Spaces" style="position: absolute; left: 1130px; top: 295px; width: 142px; height: 24px">
+
+  <!-- bottom bar -->
+  <svg aria-hidden="true" width="42" height="42" viewBox="0 0 24 24" style="position: absolute; left: 454px; top: 551px" fill="none" stroke="#e3141f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11V8.5A2.5 2.5 0 0 1 7.5 6h9A2.5 2.5 0 0 1 19 8.5V11"></path><path d="M3 13a2 2 0 0 1 4 0v1h10v-1a2 2 0 0 1 4 0v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path><path d="M6 18v1.5M18 18v1.5"></path></svg>
+  <svg aria-hidden="true" width="46" height="46" viewBox="0 0 24 24" style="position: absolute; left: 718px; top: 549px" fill="none" stroke="#e3141f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="2.6"></circle><circle cx="5.5" cy="9" r="2"></circle><circle cx="18.5" cy="9" r="2"></circle><path d="M7 18v-1.5a5 5 0 0 1 10 0V18"></path><path d="M2 17.5v-.5a3.5 3.5 0 0 1 4-3.4M22 17.5v-.5a3.5 3.5 0 0 0-4-3.4"></path></svg>
+  <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" style="position: absolute; left: 1025px; top: 550px" fill="none" stroke="#e3141f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"></rect><path d="M3 10h18M8 3v4M16 3v4"></path><path d="M8.5 15l2.5 2.5 4.5-4.5"></path></svg>
+  <svg aria-hidden="true" width="42" height="42" viewBox="0 0 24 24" style="position: absolute; left: 1310px; top: 551px" fill="none" stroke="#e3141f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.4 9.2-8 10.8-4.6-1.6-8-5.8-8-10.8v-6z"></path><path d="M8.5 12l2.5 2.5 4.5-5"></path></svg>
+
+  <div style="position: absolute; left: 524px; top: 546px; font-size: 18.5px; line-height: 23.5px; font-weight: 600; letter-spacing: -0.5px; white-space: nowrap">Premium<br>Workspaces</div>
+  <div style="position: absolute; left: 792px; top: 546px; font-size: 18.5px; line-height: 23.5px; font-weight: 600; letter-spacing: -0.5px; white-space: nowrap">Growing<br>Business Community</div>
+  <div style="position: absolute; left: 1100px; top: 546px; font-size: 18.5px; line-height: 23.5px; font-weight: 600; letter-spacing: -0.5px; white-space: nowrap">Flexible<br>Tenure Options</div>
+  <div style="position: absolute; left: 1381px; top: 547px; font-size: 18.5px; line-height: 23.5px; font-weight: 600; letter-spacing: -0.5px; white-space: nowrap">Safe &amp; Secure<br>Premises</div>
+</div>
+    </div>
+  </div>
+  <div class="fluid">
+  <div class="container why-grid">
+    <div class="why-copy reveal">
+      <p class="eyebrow"><span class="eyebrow-line"></span>WHY ACE SPACES</p>
+      <h2 class="h2">More Than a Workspace,<br>A <em class="text-red">Growth Partner</em> for<br><em class="text-red underline-red">Your Business.</em></h2>
       <p class="lead">Flexible, professional, fully-equipped workspaces for startups, teams, and growing businesses in Mohali &amp; Zirakpur.</p>
-      <a href="#membership" class="btn btn--redpill"><svg><use href="#i-cal"/></svg>Choose Your Space<span class="btn__dot"><svg><use href="#i-arrow"/></svg></span></a>
+      <a href="#spaces" class="btn btn-red btn-pill btn-shine btn-lg"><svg class="ic ic-lg"><use href="#i-calendar"/></svg>Choose Your Space <span class="btn-circle"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
     </div>
-    <div class="hub rv" id="hub">
-      <svg class="hub__lines" viewBox="0 0 640 380" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M232 60 C 270 60, 280 140, 320 160"/><path d="M200 190 H 270"/><path d="M232 320 C 270 320, 280 240, 320 220"/>
-        <path d="M408 60 C 370 60, 360 140, 320 160"/><path d="M440 190 H 370"/><path d="M408 320 C 370 320, 360 240, 320 220"/>
-      </svg>
-      <div class="hub__core"><span class="hub__pulse"></span><svg><use href="#logo3"/></svg><b>ACE Spaces</b></div>
-      <div class="hub__n n1"><span class="ic-red"><svg><use href="#i-cal"/></svg></span><span><b>Flexible <br>Plans</b><small>Spaces that fit your way of working.</small></span></div>
-      <div class="hub__n n2"><span class="ic-red"><svg><use href="#i-laptop"/></svg></span><span><b>Professional <br>Environment</b><small>Modern, focused and fully-equipped.</small></span></div>
-      <div class="hub__n n3"><span class="ic-red"><svg><use href="#i-chart"/></svg></span><span><b>Boost <br>Productivity</b><small>A distraction-free setup to do your best.</small></span></div>
-      <div class="hub__n n4"><span class="ic-red"><svg><use href="#i-pin"/></svg></span><span><b>Prime <br>Locations</b><small>Strategically located in Mohali &amp; Zirakpur.</small></span></div>
-      <div class="hub__n n5"><span class="ic-red"><svg><use href="#i-headset"/></svg></span><span><b>Dedicated <br>Support</b><small>A responsive team that's always there.</small></span></div>
-      <div class="hub__n n6"><span class="ic-red"><svg><use href="#i-layers"/></svg></span><span><b>Scalable <br>Solutions</b><small>From solo to team spaces, scale as you grow.</small></span></div>
+    <div class="hub reveal" data-delay="1">
+      <div class="hub-rings" aria-hidden="true"></div>
+      <div class="hub-center">
+        <img src="assets/images/mark.png" alt="" width="64" height="62">
+        <img src="assets/images/wordmark-dark.png" alt="ACE Spaces" class="hub-word" width="142" height="24">
+      </div>
+      <article class="hub-card hub-l1"><span class="tile tile-soft"><svg class="ic"><use href="#i-calendar"/></svg></span><div><h3>Flexible<br>Plans</h3><p>Spaces that fit<br>your way of working.</p></div></article>
+      <article class="hub-card hub-l2"><span class="tile tile-soft"><svg class="ic"><use href="#i-laptop"/></svg></span><div><h3>Professional<br>Environment</h3><p>Modern, focused<br>and fully-equipped.</p></div></article>
+      <article class="hub-card hub-l3"><span class="tile tile-soft"><svg class="ic"><use href="#i-chart"/></svg></span><div><h3>Boost<br>Productivity</h3><p>A distraction-free<br>setup to do your best.</p></div></article>
+      <article class="hub-card hub-r1"><span class="tile tile-soft"><svg class="ic"><use href="#i-pin"/></svg></span><div><h3>Prime<br>Locations</h3><p>Strategically located<br>in Mohali &amp; Zirakpur.</p></div></article>
+      <article class="hub-card hub-r2"><span class="tile tile-soft"><svg class="ic"><use href="#i-headset"/></svg></span><div><h3>Dedicated<br>Support</h3><p>A responsive team<br>that’s always there.</p></div></article>
+      <article class="hub-card hub-r3"><span class="tile tile-soft"><svg class="ic"><use href="#i-layers"/></svg></span><div><h3>Scalable<br>Solutions</h3><p>From solo to team spaces,<br>scale as you grow.</p></div></article>
     </div>
   </div>
-  <div class="wrap">
-    <ul class="bar-light rv">
-      <li><span class="ic-red"><svg><use href="#i-sofa"/></svg></span><b>Premium <br>Workspaces</b></li>
-      <li><span class="ic-red"><svg><use href="#i-users"/></svg></span><b>Growing <br>Business Community</b></li>
-      <li><span class="ic-red"><svg><use href="#i-calcheck"/></svg></span><b>Flexible <br>Tenure Options</b></li>
-      <li><span class="ic-red"><svg><use href="#i-shield"/></svg></span><b>Safe &amp; Secure <br>Premises</b></li>
+  <div class="container">
+    <ul class="feature-bar bar-light reveal">
+      <li><span class="tile tile-soft"><svg class="ic"><use href="#i-sofa"/></svg></span><strong>Premium<br>Workspaces</strong></li>
+      <li><span class="tile tile-soft"><svg class="ic"><use href="#i-users"/></svg></span><strong>Growing<br>Business Community</strong></li>
+      <li><span class="tile tile-soft"><svg class="ic"><use href="#i-calendar-check"/></svg></span><strong>Flexible<br>Tenure Options</strong></li>
+      <li><span class="tile tile-soft"><svg class="ic"><use href="#i-shield"/></svg></span><strong>Safe &amp; Secure<br>Premises</strong></li>
     </ul>
   </div>
-</section>
-
-<!-- ================= 3. SPACES ================= -->
-<section class="spaces" id="spaces">
-  <div class="wrap">
-    <div class="panel-gold">
-      <div class="sec-head">
-        <div class="rv">
-          <p class="eyebrow eyebrow--light">Our Spaces</p>
-          <h2 class="h2 h2--light">Spaces Designed for <br><em class="gold-grad indent">Every Way You Work.</em></h2>
-        </div>
-        <p class="sec-head__p sec-head__p--gold rv">From focused work to team collaboration, discover flexible, fully-equipped spaces crafted for modern professionals and growing businesses.</p>
-      </div>
-      <div class="scards">
-        <a href="#membership" class="scard rv tilt"><div class="scard__img" style="background-image:url(images/space-cabin.jpg)"></div><span class="scard__ic"><svg><use href="#i-chair"/></svg></span><div class="scard__body"><h3>Private Cabins</h3><p>Secure, quiet, and fully-furnished cabins for focused work.</p><span class="circ"><svg><use href="#i-arrow"/></svg></span></div></a>
-        <a href="#membership" class="scard rv tilt"><div class="scard__img" style="background-image:url(images/space-desks.jpg)"></div><span class="scard__ic"><svg><use href="#i-laptop"/></svg></span><div class="scard__body"><h3>Dedicated Desks</h3><p>Your personal workspace in a vibrant, shared environment.</p><span class="circ"><svg><use href="#i-arrow"/></svg></span></div></a>
-        <a href="#membership" class="scard rv tilt"><div class="scard__img" style="background-image:url(images/space-meeting.jpg)"></div><span class="scard__ic"><svg><use href="#i-users"/></svg></span><div class="scard__body"><h3>Meeting Rooms</h3><p>Professional, tech-enabled rooms for meetings &amp; presentations.</p><span class="circ"><svg><use href="#i-arrow"/></svg></span></div></a>
-        <a href="#amenities" class="scard rv tilt"><div class="scard__img" style="background-image:url(images/space-lounge.jpg)"></div><span class="scard__ic"><svg><use href="#i-cup"/></svg></span><div class="scard__body"><h3>Collaborative Zones</h3><p>Relax, network, and spark new ideas in open spaces.</p><span class="circ"><svg><use href="#i-arrow"/></svg></span></div></a>
-      </div>
-      <ul class="bar-gold rv">
-        <li><svg><use href="#i-wifi"/></svg><b>High-Speed <br>Internet</b></li>
-        <li><svg><use href="#i-ac"/></svg><b>Comfortable <br>&amp; Air-Conditioned</b></li>
-        <li><svg><use href="#i-print"/></svg><b>Printing &amp; <br>Office Support</b></li>
-        <li><svg><use href="#i-cctv"/></svg><b>24/7 <br>Security</b></li>
-        <li><svg><use href="#i-park"/></svg><b>Ample <br>Parking</b></li>
-        <li><svg><use href="#i-food"/></svg><b>Café &amp; <br>Refreshments</b></li>
-      </ul>
-      <svg class="gold-wave" viewBox="0 0 1400 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80C300 10 520 60 700 60S1100 10 1400 80"/></svg>
-    </div>
   </div>
 </section>
 
-<!-- ================= 4. LOCATIONS ================= -->
-<section class="locs light" id="locations">
-  <div class="wrap">
-    <div class="locs__top">
-      <div class="rv">
-        <p class="eyebrow">Our Locations</p>
-        <h2 class="h2">Work From Prime <br>Locations <em class="red">in Tricity.</em><svg class="swoosh swoosh--red swoosh--r" viewBox="0 0 180 12" aria-hidden="true"><path d="M2 10C50 3 120 1 178 6"/></svg></h2>
+<!-- ============ 3. OUR SPACES ============ -->
+<section class="section dark-gold spaces" id="spaces">
+  <div class="exact reveal" style="--h: 824; --edge: #0b0804">
+    <div class="exact-stage">
+<div style="position: relative; width: 1920px; height: 824px; overflow: hidden; background: #0d0a07; font-family: 'DM Sans', sans-serif; color: #fff">
+  <img src="assets/images/bg-spaces.jpg" alt="Photos of a private cabin, dedicated desks, a meeting room and a collaborative lounge" class="exact-bg" width="1920" height="824">
+
+  <div style="position: absolute; left: 438px; top: 79px; font-size: 14.5px; line-height: 20px; font-weight: 600; letter-spacing: 2.6px; color: #fff">OUR SPACES</div>
+  <h2 style="position: absolute; left: 381px; top: 104px; margin: 0; font-size: 50px; line-height: 54px; font-weight: 700; letter-spacing: -1.2px; white-space: nowrap; color: #fff">Spaces Designed for<br><span style="display: inline-block; margin-left: 73px; font-size: 51.5px; font-style: italic; font-weight: 800; background: linear-gradient(180deg, #ffd98a 0%, #f6b23a 55%, #e0951c 100%); -webkit-background-clip: text; background-clip: text; color: transparent">Every Way You Work.</span></h2>
+  <p style="position: absolute; left: 1139px; top: 120px; margin: 0; font-size: 18px; line-height: 24.5px; letter-spacing: -0.3px; white-space: nowrap; color: #ebe7e1">From focused work to team collaboration, discover<br>flexible, fully-equipped spaces crafted for modern<br>professionals and growing businesses.</p>
+
+  <div style="position: absolute; left: 342px; top: 516px; white-space: nowrap">
+    <div style="font-size: 23px; line-height: 30px; font-weight: 700; letter-spacing: -0.6px; color: #fff">Private Cabins</div>
+    <div style="margin-top: 11px; font-size: 14px; line-height: 19.5px; letter-spacing: -0.45px; color: #e8e4de">Secure, quiet, and fully-furnished<br>cabins for focused work.</div>
+  </div>
+  <div style="position: absolute; left: 681px; top: 516px; white-space: nowrap">
+    <div style="font-size: 23px; line-height: 30px; font-weight: 700; letter-spacing: -0.6px; color: #fff">Dedicated Desks</div>
+    <div style="margin-top: 11px; font-size: 14px; line-height: 19.5px; letter-spacing: -0.45px; color: #e8e4de">Your personal workspace in a<br>vibrant, shared environment.</div>
+  </div>
+  <div style="position: absolute; left: 1002px; top: 516px; white-space: nowrap">
+    <div style="font-size: 23px; line-height: 30px; font-weight: 700; letter-spacing: -0.6px; color: #fff">Meeting Rooms</div>
+    <div style="margin-top: 11px; font-size: 14px; line-height: 19.5px; letter-spacing: -0.45px; color: #e8e4de">Professional, tech-enabled<br><span style="letter-spacing: -0.8px">rooms for meetings &amp; presentations.</span></div>
+  </div>
+  <div style="position: absolute; left: 1319px; top: 516px; white-space: nowrap">
+    <div style="font-size: 23px; line-height: 30px; font-weight: 700; letter-spacing: -0.6px; color: #fff">Collaborative Zones</div>
+    <div style="margin-top: 11px; font-size: 14px; line-height: 19.5px; letter-spacing: -0.45px; color: #e8e4de">Relax, network, and spark<br>new ideas in open spaces.</div>
+  </div>
+
+  <div style="position: absolute; left: 470px; top: 682px; font-size: 15px; line-height: 20px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #fff">High-Speed<br>Internet</div>
+  <div style="position: absolute; left: 662px; top: 682px; font-size: 15px; line-height: 20px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Comfortable<br>&amp; Air-Conditioned</div>
+  <div style="position: absolute; left: 886px; top: 682px; font-size: 15px; line-height: 20px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Printing &amp;<br>Office Support</div>
+  <div style="position: absolute; left: 1089px; top: 682px; font-size: 15px; line-height: 20px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #fff">24/7<br>Security</div>
+  <div style="position: absolute; left: 1258px; top: 682px; font-size: 15px; line-height: 20px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Ample<br>Parking</div>
+  <div style="position: absolute; left: 1418px; top: 682px; font-size: 15px; line-height: 20px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Café &amp;<br>Refreshments</div>
+</div>
+    </div>
+  </div>
+  <div class="fluid">
+  <div class="container">
+    <div class="split-head reveal">
+      <div>
+        <p class="eyebrow eyebrow-wide"><span class="eyebrow-line"></span>OUR SPACES</p>
+        <h2 class="h2 h2-light">Spaces Designed for<br><em class="text-gold indent">Every Way You Work.</em></h2>
+      </div>
+      <p class="split-text gold-rule">From focused work to team collaboration, discover flexible, fully-equipped spaces crafted for modern professionals and growing businesses.</p>
+    </div>
+    <div class="space-grid">
+      <article class="space-card reveal">
+        <div class="space-img"><img src="assets/images/space-private-cabin.jpg" alt="Private cabin with desk and city view" loading="lazy" width="280" height="178"><span class="tile tile-gold tile-float"><svg class="ic"><use href="#i-desk"/></svg></span></div>
+        <div class="space-body"><h3>Private Cabins</h3><p>Secure, quiet, and fully-furnished cabins for focused work.</p><a href="#pricing" class="circle-link" aria-label="Private Cabins plans"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+      </article>
+      <article class="space-card reveal" data-delay="1">
+        <div class="space-img"><img src="assets/images/space-dedicated-desk.jpg" alt="Open office with dedicated desks and plants" loading="lazy" width="290" height="180"><span class="tile tile-gold tile-float"><svg class="ic"><use href="#i-laptop"/></svg></span></div>
+        <div class="space-body"><h3>Dedicated Desks</h3><p>Your personal workspace in a vibrant, shared environment.</p><a href="#pricing" class="circle-link" aria-label="Dedicated Desks plans"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+      </article>
+      <article class="space-card reveal" data-delay="2">
+        <div class="space-img"><img src="assets/images/space-meeting-room.jpg" alt="Meeting room with long table and screen" loading="lazy" width="282" height="180"><span class="tile tile-gold tile-float"><svg class="ic"><use href="#i-users"/></svg></span></div>
+        <div class="space-body"><h3>Meeting Rooms</h3><p>Professional, tech-enabled rooms for meetings &amp; presentations.</p><a href="#pricing" class="circle-link" aria-label="Meeting Rooms plans"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+      </article>
+      <article class="space-card reveal" data-delay="3">
+        <div class="space-img"><img src="assets/images/space-collab-zone.jpg" alt="Collaborative lounge with sofas" loading="lazy" width="290" height="178"><span class="tile tile-gold tile-float"><svg class="ic"><use href="#i-cup"/></svg></span></div>
+        <div class="space-body"><h3>Collaborative Zones</h3><p>Relax, network, and spark new ideas in open spaces.</p><a href="#pricing" class="circle-link" aria-label="Collaborative Zones plans"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+      </article>
+    </div>
+    <ul class="feature-bar bar-gold bar-compact reveal">
+      <li><svg class="ic ic-gold"><use href="#i-wifi"/></svg><strong>High-Speed<br>Internet</strong></li>
+      <li><svg class="ic ic-gold"><use href="#i-aircon"/></svg><strong>Comfortable<br>&amp; Air-Conditioned</strong></li>
+      <li><svg class="ic ic-gold"><use href="#i-printer"/></svg><strong>Printing &amp;<br>Office Support</strong></li>
+      <li><svg class="ic ic-gold"><use href="#i-cctv"/></svg><strong>24/7<br>Security</strong></li>
+      <li><svg class="ic ic-gold"><use href="#i-parking"/></svg><strong>Ample<br>Parking</strong></li>
+      <li><svg class="ic ic-gold"><use href="#i-utensils"/></svg><strong>Café &amp;<br>Refreshments</strong></li>
+    </ul>
+  </div>
+  <div class="swoosh swoosh-gold" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ 4. OUR LOCATIONS ============ -->
+<section class="section light locations" id="locations">
+  <div class="exact reveal" style="--h: 875; --edge: #eee8e4">
+    <div class="exact-stage">
+<div style="position: relative; width: 1920px; height: 875px; overflow: hidden; background: #f6f1ee; font-family: 'DM Sans', sans-serif; color: #1a1a1a">
+  <img src="assets/images/bg-locations.jpg" alt="ACE Spaces lounge, and the Mohali and Zirakpur office buildings" class="exact-bg" width="1920" height="875">
+
+  <div style="position: absolute; left: 360px; top: 101px; font-size: 14.5px; line-height: 20px; font-weight: 700; letter-spacing: 2.6px; color: #2a2a2a">OUR LOCATIONS</div>
+  <h2 style="position: absolute; left: 304px; top: 117px; margin: 0; font-size: 54.5px; line-height: 53px; font-weight: 700; letter-spacing: -1.3px; white-space: nowrap; color: #1a1a1a">Work From Prime<br>Locations <span style="color: #e3141f; font-style: italic; font-weight: 800">in Tricity.</span></h2>
+  <svg aria-hidden="true" width="200" height="20" viewBox="0 0 200 20" style="position: absolute; left: 606px; top: 223px"><path d="M3 16 C 60 5, 130 2, 197 6" fill="none" stroke="#e3141f" stroke-width="2.6" stroke-linecap="round"></path></svg>
+  <p style="position: absolute; left: 309px; top: 254px; margin: 0; font-size: 17.5px; line-height: 23.5px; letter-spacing: -0.3px; white-space: nowrap; color: #2a2a2a">Strategically located in Mohali &amp; Zirakpur, ACE Spaces keeps<br>you connected to business hubs, talent and endless opportunities.</p>
+
+  <div style="position: absolute; left: 401px; top: 370px; font-size: 17px; line-height: 22px; font-weight: 600; letter-spacing: -0.3px; color: #fff">Mohali</div>
+  <h3 style="position: absolute; left: 356px; top: 412px; margin: 0; font-size: 30.5px; line-height: 33px; font-weight: 700; letter-spacing: -0.6px; white-space: nowrap; color: #fff"><span style="display: block; margin-left: 7px">Mohali</span>Workspace</h3>
+  <p style="position: absolute; left: 345px; top: 490px; margin: 0; font-size: 14.5px; line-height: 19.5px; letter-spacing: -0.3px; white-space: nowrap; color: #f0eeec"><span style="margin-left: 3px">A premium coworking hub</span><br>in IT City, Mohali.</p>
+  <a href="#locations" style="position: absolute; left: 335px; top: 546px; width: 168px; height: 38px; border-radius: 19px; display: flex; align-items: center; padding-left: 23px; box-sizing: border-box; font-size: 14.5px; font-weight: 600; letter-spacing: -0.2px; white-space: nowrap; color: #fff">Explore Mohali</a>
+
+  <div style="position: absolute; left: 1040px; top: 384px; font-size: 17px; line-height: 22px; font-weight: 600; letter-spacing: -0.3px; color: #fff">Zirakpur</div>
+  <h3 style="position: absolute; left: 1000px; top: 422px; margin: 0; font-size: 30px; line-height: 31px; font-weight: 700; letter-spacing: -0.6px; white-space: nowrap; color: #fff"><span style="display: block; margin-left: 6px">Zirakpur</span>Workspace</h3>
+  <p style="position: absolute; left: 990px; top: 493px; margin: 0; font-size: 14.5px; line-height: 18.5px; letter-spacing: -0.3px; white-space: nowrap; color: #f0eeec"><span style="margin-left: 3px">A modern &amp; accessible</span><br>workspace on PR-7, Zirakpur.</p>
+  <a href="#locations" style="position: absolute; left: 981px; top: 546px; width: 177px; height: 38px; border-radius: 19px; display: flex; align-items: center; padding-left: 23px; box-sizing: border-box; font-size: 14.5px; font-weight: 600; letter-spacing: -0.2px; white-space: nowrap; color: #fff">Explore Zirakpur</a>
+
+  <div style="position: absolute; left: 438px; top: 650px; font-size: 14.5px; line-height: 19.5px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #1a1a1a">High-Speed<br>Internet</div>
+  <div style="position: absolute; left: 645px; top: 650px; font-size: 14.5px; line-height: 19.5px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #1a1a1a">Meeting<br>Rooms</div>
+  <div style="position: absolute; left: 836px; top: 650px; font-size: 14.5px; line-height: 19.5px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #1a1a1a">Café &amp;<br>Lounge</div>
+  <div style="position: absolute; left: 1026px; top: 650px; font-size: 14.5px; line-height: 19.5px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #1a1a1a">Dedicated<br>Desks</div>
+  <div style="position: absolute; left: 1224px; top: 650px; font-size: 14.5px; line-height: 19.5px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #1a1a1a">Private<br>Cabins</div>
+  <div style="position: absolute; left: 1417px; top: 650px; font-size: 14.5px; line-height: 19.5px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #1a1a1a">Ample<br>Parking</div>
+
+  <a href="#faq" style="position: absolute; left: 316px; top: 733px; width: 1214px; height: 62px; border-radius: 14px; color: #fff">
+    <span style="position: absolute; left: 88px; top: 12px; font-size: 25px; line-height: 34px; font-weight: 700; letter-spacing: -0.6px; white-space: nowrap; color: #fff">Book a Space Tour</span>
+  </a>
+  <span style="position: absolute; left: 724px; top: 754px; font-size: 15px; line-height: 22px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Guided Workspace Tour</span>
+  <span style="position: absolute; left: 967px; top: 754px; font-size: 15px; line-height: 22px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Choose Your Preferred Plan</span>
+  <span style="position: absolute; left: 1237px; top: 754px; font-size: 15px; line-height: 22px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Get Personalized Assistance</span>
+</div>
+    </div>
+  </div>
+  <div class="fluid">
+  <div class="container">
+    <div class="loc-top">
+      <div class="reveal">
+        <p class="eyebrow eyebrow-wide"><span class="eyebrow-line"></span>OUR LOCATIONS</p>
+        <h2 class="h2">Work From Prime<br>Locations <em class="text-red underline-red">in Tricity.</em></h2>
         <p class="lead">Strategically located in Mohali &amp; Zirakpur, ACE Spaces keeps you connected to business hubs, talent and endless opportunities.</p>
       </div>
-      <div class="locs__lobby rv" style="background-image:url(images/loc-lobby.jpg)" role="img" aria-label="ACE Spaces lobby"></div>
+      <div class="loc-lounge reveal" data-delay="1"><img src="assets/images/loc-lounge.jpg" alt="ACE Spaces lounge with brand wall" loading="lazy" width="707" height="248"></div>
     </div>
-    <div class="lcards">
-      <article class="lcard rv tilt">
-        <div class="lcard__img" style="background-image:url(images/loc-mohali.jpg)"></div>
-        <div class="lcard__body">
-          <p class="lcard__city"><svg><use href="#i-pin"/></svg>Mohali</p>
-          <h3>Mohali <br>Workspace</h3>
-          <p>A premium coworking hub <br>in IT City, Mohali.</p>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=ACE+Spaces+IT+City+Mohali" target="_blank" rel="noopener" class="btn btn--wline">Explore Mohali <svg class="ic-sm"><use href="#i-arrowup"/></svg></a>
+    <div class="loc-grid">
+      <article class="loc-card reveal">
+        <div class="loc-info">
+          <p class="loc-city"><svg class="ic"><use href="#i-pin"/></svg>Mohali</p>
+          <h3>Mohali<br>Workspace</h3>
+          <p>A premium coworking hub in IT City, Mohali.</p>
+          <a href="#visit" class="btn btn-ghost">Explore Mohali <svg class="ic"><use href="#i-arrow-ur"/></svg></a>
         </div>
+        <img src="assets/images/loc-mohali.jpg" alt="ACE Spaces Mohali building at dusk" loading="lazy" width="392" height="246">
       </article>
-      <article class="lcard rv tilt">
-        <div class="lcard__img" style="background-image:url(images/loc-zirakpur.jpg)"></div>
-        <div class="lcard__body">
-          <p class="lcard__city"><svg><use href="#i-pin"/></svg>Zirakpur</p>
-          <h3>Zirakpur <br>Workspace</h3>
-          <p>A modern &amp; accessible <br>workspace on PR-7, Zirakpur.</p>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=ACE+Spaces+PR-7+Zirakpur" target="_blank" rel="noopener" class="btn btn--wline">Explore Zirakpur <svg class="ic-sm"><use href="#i-arrowup"/></svg></a>
+      <article class="loc-card reveal" data-delay="1">
+        <div class="loc-info">
+          <p class="loc-city"><svg class="ic"><use href="#i-pin"/></svg>Zirakpur</p>
+          <h3>Zirakpur<br>Workspace</h3>
+          <p>A modern &amp; accessible workspace on PR-7, Zirakpur.</p>
+          <a href="#visit" class="btn btn-ghost">Explore Zirakpur <svg class="ic"><use href="#i-arrow-ur"/></svg></a>
         </div>
+        <img src="assets/images/loc-zirakpur.jpg" alt="ACE Spaces Zirakpur building at dusk" loading="lazy" width="374" height="218">
       </article>
     </div>
-    <ul class="bar-light bar-light--6 rv">
-      <li><span class="ic-goldsoft"><svg><use href="#i-wifi"/></svg></span><b>High-Speed <br>Internet</b></li>
-      <li><span class="ic-goldsoft"><svg><use href="#i-users"/></svg></span><b>Meeting <br>Rooms</b></li>
-      <li><span class="ic-goldsoft"><svg><use href="#i-cup"/></svg></span><b>Café &amp; <br>Lounge</b></li>
-      <li><span class="ic-goldsoft"><svg><use href="#i-desk"/></svg></span><b>Dedicated <br>Desks</b></li>
-      <li><span class="ic-goldsoft"><svg><use href="#i-users"/></svg></span><b>Private <br>Cabins</b></li>
-      <li><span class="ic-goldsoft"><svg><use href="#i-park"/></svg></span><b>Ample <br>Parking</b></li>
+    <ul class="feature-bar bar-light bar-compact reveal">
+      <li><span class="tile tile-cream"><svg class="ic"><use href="#i-wifi"/></svg></span><strong>High-Speed<br>Internet</strong></li>
+      <li><span class="tile tile-cream"><svg class="ic"><use href="#i-users"/></svg></span><strong>Meeting<br>Rooms</strong></li>
+      <li><span class="tile tile-cream"><svg class="ic"><use href="#i-cup"/></svg></span><strong>Café &amp;<br>Lounge</strong></li>
+      <li><span class="tile tile-cream"><svg class="ic"><use href="#i-desk"/></svg></span><strong>Dedicated<br>Desks</strong></li>
+      <li><span class="tile tile-cream"><svg class="ic"><use href="#i-users"/></svg></span><strong>Private<br>Cabins</strong></li>
+      <li><span class="tile tile-cream"><svg class="ic"><use href="#i-parking"/></svg></span><strong>Ample<br>Parking</strong></li>
     </ul>
-    <a href="#" class="redbar rv js-open-visit">
-      <span class="redbar__title"><svg><use href="#i-cal"/></svg>Book a Space Tour</span>
-      <span class="redbar__item"><svg><use href="#i-check"/></svg>Guided Workspace Tour</span>
-      <span class="redbar__item"><svg><use href="#i-check"/></svg>Choose Your Preferred Plan</span>
-      <span class="redbar__item"><svg><use href="#i-check"/></svg>Get Personalized Assistance</span>
-      <span class="redbar__go"><svg><use href="#i-arrow"/></svg></span>
+    <a href="#visit" class="cta-bar reveal">
+      <span class="cta-bar-title"><svg class="ic ic-lg"><use href="#i-calendar"/></svg>Book a Space Tour</span>
+      <span class="cta-bar-item"><svg class="ic"><use href="#i-check"/></svg>Guided Workspace Tour</span>
+      <span class="cta-bar-item"><svg class="ic"><use href="#i-check"/></svg>Choose Your Preferred Plan</span>
+      <span class="cta-bar-item"><svg class="ic"><use href="#i-check"/></svg>Get Personalized Assistance</span>
+      <span class="btn-circle"><svg class="ic"><use href="#i-arrow"/></svg></span>
     </a>
   </div>
+  </div>
 </section>
 
-<!-- ================= 5. AMENITIES ================= -->
-<section class="amen" id="amenities">
-  <div class="amen__photo" style="background-image:url(images/amen-lounge.jpg)" aria-hidden="true"></div>
-  <div class="amen__swirl" aria-hidden="true"></div>
-  <div class="wrap amen__in">
-    <div class="amen__head rv">
-      <p class="eyebrow eyebrow--light">Our Amenities</p>
-      <h2 class="h2 h2--light">Everything You Need <br>for a <em class="red">Productive Workday.</em><svg class="swoosh swoosh--red swoosh--r" viewBox="0 0 180 12" aria-hidden="true"><path d="M2 10C50 3 120 1 178 6"/></svg></h2>
-      <p class="lead lead--light">World-class amenities designed to keep you, <br>your team and your business running at its best.</p>
+<!-- ============ 5. AMENITIES ============ -->
+<section class="section dark-red amenities" id="amenities">
+  <div class="exact reveal" style="--h: 952; --edge: #230f10">
+    <div class="exact-stage">
+<div style="position: relative; width: 1920px; height: 952px; overflow: hidden; background: #120d0d; font-family: 'DM Sans', sans-serif; color: #fff">
+  <img src="assets/images/bg-amenities.jpg" alt="ACE Spaces lounge with glass meeting rooms, laptop and branded mug; photos of a meeting room, café lounge and coworking desks" class="exact-bg" width="1920" height="952">
+
+  <div style="position: absolute; left: 297px; top: 88px; width: 47px; height: 5px; border-radius: 3px; background: #e3141f"></div>
+  <div style="position: absolute; left: 362px; top: 80px; font-size: 16.5px; line-height: 22px; font-weight: 700; letter-spacing: 0.3px; color: #fff">OUR AMENITIES</div>
+
+  <h2 style="position: absolute; left: 295px; top: 107px; width: 660px; margin: 0; font-size: 54.5px; line-height: 56px; font-weight: 700; letter-spacing: -1.4px; color: #fff; white-space: nowrap">Everything You Need<br>for a <span style="color: #f0141f; font-style: italic; font-weight: 800">Productive Workday.</span></h2>
+  <svg aria-hidden="true" width="260" height="22" viewBox="0 0 260 22" style="position: absolute; left: 636px; top: 221px"><path d="M4 19 C 80 4, 170 1, 256 10" fill="none" stroke="#e3141f" stroke-width="3.2" stroke-linecap="round"></path></svg>
+
+  <p style="position: absolute; left: 296px; top: 249px; width: 520px; margin: 0; font-size: 22px; line-height: 30px; letter-spacing: -0.3px; color: #f1ece7">World-class amenities designed to keep you,<br>your team and your business running at its best.</p>
+
+  <svg aria-hidden="true" width="54" height="54" viewBox="0 0 24 24" style="position: absolute; left: 308px; top: 368px" fill="none" stroke="#f0141f" stroke-width="2.3" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"></path><path d="M5 12.6a10 10 0 0 1 14 0"></path><path d="M8.5 16.3a5 5 0 0 1 7 0"></path><circle cx="12" cy="19.5" r="1" fill="#f0141f"></circle></svg>
+  <svg aria-hidden="true" width="52" height="52" viewBox="0 0 24 24" style="position: absolute; left: 309px; top: 471px" fill="none" stroke="#f0141f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.4 9.2-8 10.8-4.6-1.6-8-5.8-8-10.8v-6z"></path><path d="M8.5 12l2.5 2.5 4.5-5"></path></svg>
+  <svg aria-hidden="true" width="54" height="54" viewBox="0 0 24 24" style="position: absolute; left: 308px; top: 569px" fill="none" stroke="#f0141f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="3.2"></circle><circle cx="5.5" cy="9.5" r="2.2"></circle><circle cx="18.5" cy="9.5" r="2.2"></circle><path d="M6.5 20v-1.5a5.5 5.5 0 0 1 11 0V20z"></path><path d="M2 19v-.5a3.5 3.5 0 0 1 4-3.4M22 19v-.5a3.5 3.5 0 0 0-4-3.4"></path></svg>
+
+  <div style="position: absolute; left: 401px; top: 363px; white-space: nowrap">
+    <div style="font-size: 26px; line-height: 32px; font-weight: 700; letter-spacing: -0.9px">Stay Connected</div>
+    <div style="margin-top: 3px; font-size: 17.5px; line-height: 22px; letter-spacing: -0.3px; color: #eee8e2">High-speed, reliable internet.</div>
+  </div>
+  <div style="position: absolute; left: 401px; top: 465px; white-space: nowrap">
+    <div style="font-size: 26px; line-height: 32px; font-weight: 700; letter-spacing: -0.9px">Work Securely</div>
+    <div style="margin-top: 3px; font-size: 17.5px; line-height: 22px; letter-spacing: -0.3px; color: #eee8e2">Safe, private and 24/7 access.</div>
+  </div>
+  <div style="position: absolute; left: 401px; top: 564px; white-space: nowrap">
+    <div style="font-size: 26px; line-height: 32px; font-weight: 700; letter-spacing: -0.9px">Work Comfortably</div>
+    <div style="margin-top: 3px; font-size: 17.5px; line-height: 22px; letter-spacing: -0.3px; color: #eee8e2">Modern, well-equipped spaces.</div>
+  </div>
+
+  <svg aria-hidden="true" width="38" height="38" viewBox="0 0 24 24" style="position: absolute; left: 704px; top: 590px" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"></circle><circle cx="5" cy="9" r="1.7"></circle><circle cx="19" cy="9" r="1.7"></circle><path d="M3 13h18v2H3z"></path><path d="M6 15v5M18 15v5M12 15v3"></path><path d="M9 10.5a3 3 0 0 1 6 0"></path><path d="M3 15.5l-1 4M21 15.5l1 4"></path></svg>
+  <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" style="position: absolute; left: 1036px; top: 589px" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"></path><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"></path><path d="M3 21h16"></path><path d="M8 3.5c-.6.8.6 1.6 0 2.5M11 3.5c-.6.8.6 1.6 0 2.5M14 3.5c-.6.8.6 1.6 0 2.5"></path></svg>
+  <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" style="position: absolute; left: 1364px; top: 589px" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9h20"></path><path d="M4 9v11M20 9v11"></path><rect x="13" y="12" width="7" height="5" rx="0.5"></rect><path d="M8 3h8v6H8z"></path><path d="M10 12v4l-2 3M10 16l2 3"></path></svg>
+
+  <div style="position: absolute; left: 771px; top: 581px; font-size: 22.5px; line-height: 27px; font-weight: 500; letter-spacing: -0.3px">Meeting<br>Rooms</div>
+  <div style="position: absolute; left: 1109px; top: 581px; font-size: 22.5px; line-height: 27px; font-weight: 500; letter-spacing: -0.3px">Café<br>Lounge</div>
+  <div style="position: absolute; left: 1435px; top: 581px; font-size: 22.5px; line-height: 27px; font-weight: 500; letter-spacing: -0.3px">Coworking<br>Desks</div>
+
+  <svg aria-hidden="true" width="42" height="42" viewBox="0 0 24 24" style="position: absolute; left: 340px; top: 697px" fill="none" stroke="#f5b83d" stroke-width="2" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"></path><path d="M5 12.6a10 10 0 0 1 14 0"></path><path d="M8.5 16.3a5 5 0 0 1 7 0"></path><circle cx="12" cy="19.5" r="1" fill="#f5b83d"></circle></svg>
+  <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" style="position: absolute; left: 589px; top: 696px" fill="none" stroke="#f5b83d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"></path><rect x="2.5" y="9" width="19" height="9" rx="2"></rect><path d="M6 14h12v7H6z"></path><path d="M17.5 12h.5"></path></svg>
+  <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" style="position: absolute; left: 813px; top: 696px" fill="none" stroke="#f5b83d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.4 9.2-8 10.8-4.6-1.6-8-5.8-8-10.8v-6z"></path><path d="M8.5 12l2.5 2.5 4.5-5"></path></svg>
+  <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" style="position: absolute; left: 1021px; top: 696px" fill="none" stroke="#f5b83d" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 3l-7.5 7.5"></path><path d="M12.5 10.5l1.5 1.5-3 3c-1 1-3 3-6.5 6.5 0 0 1-4 2-5.5s2-2.5 3-3z"></path><path d="M8 16l2 2M6.5 18l1.5 1.5"></path><path d="M4 4v3M2.5 5.5h3M18 15v3M16.5 16.5h3"></path></svg>
+  <svg aria-hidden="true" width="46" height="46" viewBox="0 0 24 24" style="position: absolute; left: 1268px; top: 695px" fill="none" stroke="#f5b83d" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="5.5"></circle><path d="M10.5 10V5h2a1.5 1.5 0 0 1 0 3h-2"></path><path d="M3 18.5l1.5-4h15l1.5 4v2.5H3z"></path><circle cx="7" cy="21" r="1.3"></circle><circle cx="17" cy="21" r="1.3"></circle></svg>
+  <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" style="position: absolute; left: 1483px; top: 696px" fill="none" stroke="#f5b83d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path><path d="M12 12.5l1.1 2.2 2.4.3-1.7 1.7.4 2.4-2.2-1.1-2.2 1.1.4-2.4-1.7-1.7 2.4-.3z" fill="#f5b83d"></path></svg>
+
+  <div style="position: absolute; left: 414px; top: 691px; font-size: 18.5px; line-height: 26px; font-weight: 500; letter-spacing: -0.4px; white-space: nowrap">High-Speed<br>Internet</div>
+  <div style="position: absolute; left: 664px; top: 691px; font-size: 18.5px; line-height: 26px; font-weight: 500; letter-spacing: -0.4px; white-space: nowrap">Printing<br>Support</div>
+  <div style="position: absolute; left: 886px; top: 691px; font-size: 18.5px; line-height: 26px; font-weight: 500; letter-spacing: -0.4px; white-space: nowrap">Secure<br>Access</div>
+  <div style="position: absolute; left: 1092px; top: 691px; font-size: 18.5px; line-height: 26px; font-weight: 500; letter-spacing: -0.4px; white-space: nowrap">Daily<br>Housekeeping</div>
+  <div style="position: absolute; left: 1342px; top: 691px; font-size: 18.5px; line-height: 26px; font-weight: 500; letter-spacing: -0.4px; white-space: nowrap">Ample<br>Parking</div>
+  <div style="position: absolute; left: 1556px; top: 691px; font-size: 18.5px; line-height: 26px; font-weight: 500; letter-spacing: -0.4px; white-space: nowrap">Event<br>Spaces</div>
+
+  <a href="#faq" style="position: absolute; left: 282px; top: 796px; width: 1382px; height: 76px; border-radius: 38px; color: #fff">
+    <svg aria-hidden="true" width="46" height="46" viewBox="0 0 24 24" style="position: absolute; left: 44px; top: 15px" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path><path d="M7.5 14h2M11 14h2M14.5 14h2M7.5 17h2"></path></svg>
+    <span style="position: absolute; left: 110px; top: 15px; font-size: 32.5px; line-height: 44px; font-weight: 700; letter-spacing: -0.7px; white-space: nowrap">Explore Our Amenities</span>
+    <span style="position: absolute; left: 520px; top: 22px; display: flex; align-items: center; gap: 14px; font-size: 19.5px; line-height: 32px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M7.5 12.5l3 3 6-6.5"></path></svg>Professional Setup</span>
+    <span style="position: absolute; left: 796px; top: 22px; display: flex; align-items: center; gap: 14px; font-size: 19.5px; line-height: 32px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M7.5 12.5l3 3 6-6.5"></path></svg>Flexible Spaces</span>
+    <span style="position: absolute; left: 1054px; top: 22px; display: flex; align-items: center; gap: 14px; font-size: 19.5px; line-height: 32px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M7.5 12.5l3 3 6-6.5"></path></svg>Business Ready</span>
+  </a>
+</div>
     </div>
-    <div class="amen__grid">
-      <ul class="amen__list">
-        <li class="rv"><span class="ic-redbox"><svg><use href="#i-wifi"/></svg></span><span><b>Stay Connected</b><small>High-speed, reliable internet.</small></span></li>
-        <li class="rv"><span class="ic-redbox"><svg><use href="#i-shield"/></svg></span><span><b>Work Securely</b><small>Safe, private and 24/7 access.</small></span></li>
-        <li class="rv"><span class="ic-redbox"><svg><use href="#i-users"/></svg></span><span><b>Work Comfortably</b><small>Modern, well-equipped spaces.</small></span></li>
+  </div>
+  <div class="fluid">
+  <div class="container">
+    <div class="amen-top">
+      <div class="reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span>OUR AMENITIES</p>
+        <h2 class="h2 h2-light h2-xl">Everything You Need<br>for a <em class="text-red underline-red">Productive Workday.</em></h2>
+        <p class="lead lead-light">World-class amenities designed to keep you, your team and your business running at its best.</p>
+      </div>
+      <div class="amen-photo reveal" data-delay="1"><img src="assets/images/amen-lounge.jpg" alt="ACE Spaces lounge with glass meeting rooms and branded mug" loading="lazy" width="745" height="320"></div>
+    </div>
+    <div class="amen-main">
+      <ul class="amen-points reveal">
+        <li><span class="tile tile-dark"><svg class="ic"><use href="#i-wifi"/></svg></span><div><h3>Stay Connected</h3><p>High-speed, reliable internet.</p></div></li>
+        <li><span class="tile tile-dark"><svg class="ic"><use href="#i-shield"/></svg></span><div><h3>Work Securely</h3><p>Safe, private and 24/7 access.</p></div></li>
+        <li><span class="tile tile-dark"><svg class="ic"><use href="#i-users"/></svg></span><div><h3>Work Comfortably</h3><p>Modern, well-equipped spaces.</p></div></li>
       </ul>
-      <a href="#membership" class="acard rv tilt"><div class="acard__img" style="background-image:url(images/amen-meeting.jpg)"></div><div class="acard__body"><span class="ic-solidred"><svg><use href="#i-meet"/></svg></span><b>Meeting <br>Rooms</b><span class="circ circ--w"><svg><use href="#i-arrow"/></svg></span></div></a>
-      <a href="#amenities" class="acard rv tilt"><div class="acard__img" style="background-image:url(images/amen-cafe.jpg)"></div><div class="acard__body"><span class="ic-solidred"><svg><use href="#i-cup"/></svg></span><b>Café <br>Lounge</b><span class="circ circ--w"><svg><use href="#i-arrow"/></svg></span></div></a>
-      <a href="#membership" class="acard rv tilt"><div class="acard__img" style="background-image:url(images/amen-desks.jpg)"></div><div class="acard__body"><span class="ic-solidred"><svg><use href="#i-desk"/></svg></span><b>Coworking <br>Desks</b><span class="circ circ--w"><svg><use href="#i-arrow"/></svg></span></div></a>
+      <div class="amen-cards">
+        <a href="#spaces" class="amen-card reveal"><img src="assets/images/amen-meeting.jpg" alt="Meeting room" loading="lazy" width="294" height="200"><span class="amen-card-foot"><span class="tile tile-red"><svg class="ic"><use href="#i-meeting"/></svg></span><span class="amen-card-title">Meeting<br>Rooms</span><span class="circle-link"><svg class="ic"><use href="#i-arrow"/></svg></span></span></a>
+        <a href="#spaces" class="amen-card reveal" data-delay="1"><img src="assets/images/amen-cafe.jpg" alt="Café lounge" loading="lazy" width="294" height="200"><span class="amen-card-foot"><span class="tile tile-red"><svg class="ic"><use href="#i-cup"/></svg></span><span class="amen-card-title">Café<br>Lounge</span><span class="circle-link"><svg class="ic"><use href="#i-arrow"/></svg></span></span></a>
+        <a href="#spaces" class="amen-card reveal" data-delay="2"><img src="assets/images/amen-cowork.jpg" alt="Coworking desks" loading="lazy" width="308" height="200"><span class="amen-card-foot"><span class="tile tile-red"><svg class="ic"><use href="#i-desk"/></svg></span><span class="amen-card-title">Coworking<br>Desks</span><span class="circle-link"><svg class="ic"><use href="#i-arrow"/></svg></span></span></a>
+      </div>
     </div>
-    <ul class="bar-dark rv">
-      <li><span class="ic-goldd"><svg><use href="#i-wifi"/></svg></span><b>High-Speed <br>Internet</b></li>
-      <li><span class="ic-goldd"><svg><use href="#i-print"/></svg></span><b>Printing <br>Support</b></li>
-      <li><span class="ic-goldd"><svg><use href="#i-shield"/></svg></span><b>Secure <br>Access</b></li>
-      <li><span class="ic-goldd"><svg><use href="#i-broom"/></svg></span><b>Daily <br>Housekeeping</b></li>
-      <li><span class="ic-goldd"><svg><use href="#i-carpark"/></svg></span><b>Ample <br>Parking</b></li>
-      <li><span class="ic-goldd"><svg><use href="#i-calstar"/></svg></span><b>Event <br>Spaces</b></li>
+    <ul class="feature-bar bar-dark bar-compact reveal">
+      <li><span class="tile tile-dark"><svg class="ic ic-gold"><use href="#i-wifi"/></svg></span><strong>High-Speed<br>Internet</strong></li>
+      <li><span class="tile tile-dark"><svg class="ic ic-gold"><use href="#i-printer"/></svg></span><strong>Printing<br>Support</strong></li>
+      <li><span class="tile tile-dark"><svg class="ic ic-gold"><use href="#i-shield"/></svg></span><strong>Secure<br>Access</strong></li>
+      <li><span class="tile tile-dark"><svg class="ic ic-gold"><use href="#i-broom"/></svg></span><strong>Daily<br>Housekeeping</strong></li>
+      <li><span class="tile tile-dark"><svg class="ic ic-gold"><use href="#i-parking"/></svg></span><strong>Ample<br>Parking</strong></li>
+      <li><span class="tile tile-dark"><svg class="ic ic-gold"><use href="#i-calendar-star"/></svg></span><strong>Event<br>Spaces</strong></li>
     </ul>
-    <a href="#" class="redbar redbar--glow rv js-open-visit">
-      <span class="redbar__title"><svg><use href="#i-cal"/></svg>Explore Our Amenities</span>
-      <span class="redbar__item"><svg><use href="#i-check"/></svg>Professional Setup</span>
-      <span class="redbar__item"><svg><use href="#i-check"/></svg>Flexible Spaces</span>
-      <span class="redbar__item"><svg><use href="#i-check"/></svg>Business Ready</span>
-      <span class="redbar__go"><svg><use href="#i-arrow"/></svg></span>
+    <a href="#visit" class="cta-bar cta-bar-glow reveal">
+      <span class="cta-bar-title cta-bar-title-lg"><svg class="ic ic-lg"><use href="#i-calendar"/></svg>Explore Our Amenities</span>
+      <span class="cta-bar-item"><svg class="ic"><use href="#i-check"/></svg>Professional Setup</span>
+      <span class="cta-bar-item"><svg class="ic"><use href="#i-check"/></svg>Flexible Spaces</span>
+      <span class="cta-bar-item"><svg class="ic"><use href="#i-check"/></svg>Business Ready</span>
+      <span class="btn-circle"><svg class="ic"><use href="#i-arrow"/></svg></span>
     </a>
   </div>
-</section>
-
-<!-- ================= 6. MEMBERSHIP ================= -->
-<section class="memb light" id="membership">
-  <div class="wrap">
-    <div class="memb__head">
-      <div class="rv">
-        <p class="eyebrow eyebrow--grey">Membership &amp; Pricing</p>
-        <h2 class="h2">Flexible Workspace Plans <br>for <em class="red">Every Work Style.</em></h2>
-        <ul class="minifeat">
-          <li><svg><use href="#i-cal"/></svg>Flexible <br>Tenure</li>
-          <li><svg><use href="#i-users"/></svg>Scalable <br>for Teams</li>
-          <li><svg><use href="#i-gem"/></svg>All Premium <br>Amenities</li>
-          <li><svg><use href="#i-shield"/></svg>Hassle-Free <br>Setup</li>
-        </ul>
-      </div>
-      <div class="memb__right rv">
-        <span class="dashes" aria-hidden="true"><i></i><i></i></span>
-        <p>Choose a workspace plan that fits your team size, work style and business goals. Flexible, scalable and packed with premium amenities.</p>
-        <div class="tabs" role="tablist" aria-label="Billing period">
-          <span class="tabs__lbl">Choose a Plan:</span>
-          <button role="tab" class="tab is-on" aria-selected="true" data-plan="Monthly"><svg><use href="#i-cal"/></svg>Monthly</button>
-          <button role="tab" class="tab" aria-selected="false" data-plan="Quarterly"><svg><use href="#i-cal"/></svg>Quarterly</button>
-          <button role="tab" class="tab" aria-selected="false" data-plan="Yearly"><svg><use href="#i-cal"/></svg>Yearly</button>
-        </div>
-      </div>
-    </div>
-    <div class="plans">
-      <article class="plan rv">
-        <div class="plan__img" style="background-image:url(images/plan-daypass.jpg)"></div>
-        <span class="plan__ic"><svg><use href="#i-cal"/></svg></span>
-        <h3>Day Pass</h3><p>A flexible, on-demand workspace for a productive day.</p>
-        <ul class="plan__ticks"><li><svg><use href="#i-check"/></svg>Hot Desk Access</li><li><svg><use href="#i-check"/></svg>High-Speed Wi-Fi</li></ul>
-        <button type="button" class="plan__btn js-quote" data-plan-name="Day Pass">Request Day Pass Quote<span class="btn__dot"><svg><use href="#i-arrow"/></svg></span></button>
-      </article>
-      <article class="plan plan--hot rv">
-        <span class="plan__badge"><svg><use href="#i-crown"/></svg>Most Popular</span>
-        <div class="plan__img" style="background-image:url(images/plan-desk.jpg)"></div>
-        <span class="plan__ic"><svg><use href="#i-laptop"/></svg></span>
-        <h3>Dedicated Desk</h3><p>Your personal desk in a collaborative, professional environment.</p>
-        <ul class="plan__ticks"><li><svg><use href="#i-check"/></svg>Reserved Desk</li><li><svg><use href="#i-check"/></svg>24/7 Access</li></ul>
-        <button type="button" class="plan__btn js-quote" data-plan-name="Dedicated Desk">Request Desk Quote<span class="btn__dot"><svg><use href="#i-arrow"/></svg></span></button>
-      </article>
-      <article class="plan rv">
-        <div class="plan__img" style="background-image:url(images/plan-cabin.jpg)"></div>
-        <span class="plan__ic"><svg><use href="#i-users"/></svg></span>
-        <h3>Private Cabin</h3><p>A secure, quiet and fully-furnished space for you or your team.</p>
-        <ul class="plan__ticks"><li><svg><use href="#i-check"/></svg>Lockable &amp; Private</li><li><svg><use href="#i-check"/></svg>Custom Setup</li></ul>
-        <button type="button" class="plan__btn js-quote" data-plan-name="Private Cabin">Request Cabin Quote<span class="btn__dot"><svg><use href="#i-arrow"/></svg></span></button>
-      </article>
-      <article class="plan rv">
-        <div class="plan__img" style="background-image:url(images/plan-meeting.jpg)"></div>
-        <span class="plan__ic"><svg><use href="#i-present"/></svg></span>
-        <h3>Meeting Room</h3><p>Professional, tech-enabled rooms for meetings, presentations &amp; more.</p>
-        <ul class="plan__ticks"><li><svg><use href="#i-check"/></svg>Multiple Capacities</li><li><svg><use href="#i-check"/></svg>AV &amp; Display</li></ul>
-        <button type="button" class="plan__btn js-quote" data-plan-name="Meeting Room">Request Room Quote<span class="btn__dot"><svg><use href="#i-arrow"/></svg></span></button>
-      </article>
-    </div>
-    <div class="custom rv">
-      <div class="custom__red"><svg><use href="#i-headset"/></svg><span><b>Need a Custom Workspace Plan?</b><small>Tell us your requirements and we'll create a tailored solution for you.</small></span></div>
-      <ul class="custom__feat">
-        <li><svg><use href="#i-pin"/></svg>Multiple <br>Locations</li>
-        <li><svg><use href="#i-bolt"/></svg>Quick <br>Onboarding</li>
-        <li><svg><use href="#i-users"/></svg>Dedicated <br>Support</li>
-      </ul>
-      <button type="button" class="btn btn--navy js-quote" data-plan-name="Custom Plan">Request a Custom Quote <svg class="ic-sm"><use href="#i-chev"/></svg></button>
-    </div>
   </div>
 </section>
 
-<!-- ================= 7. COMMUNITY ================= -->
-<section class="comm" id="community">
-  <div class="wrap">
-    <div class="comm__panel">
-      <div class="comm__photo" style="background-image:url(images/community.jpg)" aria-hidden="true"></div>
-      <div class="comm__head rv">
-        <p class="eyebrow eyebrow--light">Community &amp; Testimonials</p>
-        <h2 class="h2 h2--light"><em>A Thriving Community of</em> <br><em class="red">Professionals &amp; Builders.</em></h2>
-        <p class="lead lead--light">More than a workspace — ACE Spaces brings together entrepreneurs, creators, and growing teams to connect, collaborate and create new opportunities.</p>
-        <ul class="minifeat minifeat--dark">
-          <li><svg><use href="#i-users"/></svg>Network &amp; <br>Collaborate</li>
-          <li><svg><use href="#i-bulb"/></svg>Share <br>Ideas</li>
-          <li><svg><use href="#i-chart"/></svg>Grow <br>Together</li>
-          <li><svg><use href="#i-calstar"/></svg>Community <br>Events</li>
+<!-- ============ 6. PRICING ============ -->
+<section class="section light pricing" id="pricing">
+  <div class="exact reveal" style="--h: 962; --edge: #fef7f4">
+    <div class="exact-stage">
+<div style="position: relative; width: 1920px; height: 962px; overflow: hidden; background: #fcf6f5; font-family: 'DM Sans', sans-serif; color: #12141c">
+  <img src="assets/images/bg-pricing.jpg" alt="Photos of a day-pass lounge, dedicated desks, a private cabin and a meeting room" class="exact-bg" width="1920" height="962">
+
+  <div style="position: absolute; left: 369px; top: 94px; font-size: 18px; line-height: 24px; font-weight: 700; letter-spacing: -0.2px; color: #4b4f5a">MEMBERSHIP &amp; PRICING</div>
+  <h2 style="position: absolute; left: 296px; top: 121px; margin: 0; font-size: 50.5px; line-height: 54px; font-weight: 800; letter-spacing: -1.8px; white-space: nowrap; color: #12141c">Flexible Workspace Plans<br>for <span style="color: #e3141f; font-style: italic">Every Work Style.</span></h2>
+  <p style="position: absolute; left: 1135px; top: 139px; margin: 0; font-size: 18.5px; line-height: 25px; letter-spacing: -0.4px; white-space: nowrap; color: #1d1f27">Choose a workspace plan that fits your team size, work style<br>and business goals. Flexible, scalable and packed with<br>premium amenities.</p>
+
+  <svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" style="position: absolute; left: 295px; top: 270px" fill="none" stroke="#e3141f" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"></rect><path d="M3 10h18M8 3v4M16 3v4"></path><path d="M7 13.5h2M11 13.5h2M15 13.5h2M7 17h2M11 17h2M15 17h2"></path></svg>
+  <svg aria-hidden="true" width="38" height="38" viewBox="0 0 24 24" style="position: absolute; left: 444px; top: 267px" fill="none" stroke="#e3141f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="3.2"></circle><circle cx="5.5" cy="9.5" r="2.2"></circle><circle cx="18.5" cy="9.5" r="2.2"></circle><path d="M6.5 20v-1.5a5.5 5.5 0 0 1 11 0V20z"></path><path d="M2 19v-.5a3.5 3.5 0 0 1 4-3.4M22 19v-.5a3.5 3.5 0 0 0-4-3.4"></path></svg>
+  <svg aria-hidden="true" width="38" height="38" viewBox="0 0 24 24" style="position: absolute; left: 605px; top: 268px" fill="none" stroke="#e3141f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12l4 5-10 12L2 9z"></path><path d="M2 9h20M9 4l-2 5 5 12 5-12-2-5"></path></svg>
+  <svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" style="position: absolute; left: 777px; top: 269px" fill="none" stroke="#e3141f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.4 9.2-8 10.8-4.6-1.6-8-5.8-8-10.8v-6z"></path><path d="M8.5 12l2.5 2.5 4.5-5"></path></svg>
+  <div style="position: absolute; left: 342px; top: 268px; font-size: 15.5px; line-height: 18.5px; font-weight: 600; letter-spacing: -0.4px; white-space: nowrap">Flexible<br>Tenure</div>
+  <div style="position: absolute; left: 495px; top: 268px; font-size: 15.5px; line-height: 18.5px; font-weight: 600; letter-spacing: -0.4px; white-space: nowrap">Scalable<br>for Teams</div>
+  <div style="position: absolute; left: 654px; top: 268px; font-size: 15.5px; line-height: 18.5px; font-weight: 600; letter-spacing: -0.4px; white-space: nowrap">All Premium<br>Amenities</div>
+  <div style="position: absolute; left: 824px; top: 268px; font-size: 15.5px; line-height: 18.5px; font-weight: 600; letter-spacing: -0.4px; white-space: nowrap">Hassle-Free<br>Setup</div>
+
+  <div style="position: absolute; left: 1049px; top: 279px; font-size: 17.5px; line-height: 24px; font-weight: 700; letter-spacing: -0.4px">Choose a Plan:</div>
+  <button type="button" aria-pressed="true" style="position: absolute; left: 1183px; top: 268px; width: 147px; height: 44px; border: 0; border-radius: 22px; background: transparent; display: flex; align-items: center; justify-content: center; gap: 9px; font-family: inherit; font-size: 17.5px; font-weight: 500; letter-spacing: -0.3px; color: #fff; cursor: pointer"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="15.5" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>Monthly</button>
+  <button type="button" aria-pressed="false" style="position: absolute; left: 1340px; top: 268px; width: 148px; height: 44px; border: 0; border-radius: 22px; background: transparent; display: flex; align-items: center; justify-content: center; gap: 9px; font-family: inherit; font-size: 17.5px; font-weight: 500; letter-spacing: -0.3px; color: #14161d; cursor: pointer"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14161d" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="15.5" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>Quarterly</button>
+  <button type="button" aria-pressed="false" style="position: absolute; left: 1498px; top: 268px; width: 134px; height: 44px; border: 0; border-radius: 22px; background: transparent; display: flex; align-items: center; justify-content: center; gap: 9px; font-family: inherit; font-size: 17.5px; font-weight: 500; letter-spacing: -0.3px; color: #14161d; cursor: pointer"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14161d" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="15.5" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>Yearly</button>
+
+  <div style="position: absolute; left: 802px; top: 356px; width: 148px; height: 38px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 15.5px; font-weight: 500; letter-spacing: -0.3px; color: #fff; white-space: nowrap"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"><path d="M3 7l4.5 4L12 5l4.5 6L21 7l-2 11H5z"></path><path d="M5 21h14"></path></svg>Most Popular</div>
+
+  <svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" style="position: absolute; left: 328px; top: 515px" fill="none" stroke="#e3141f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"></rect><path d="M3 10h18M8 3v4M16 3v4"></path><path d="M7 13.5h2M11 13.5h2M15 13.5h2M7 17h2M11 17h2M15 17h2"></path></svg>
+  <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" style="position: absolute; left: 685px; top: 514px" fill="none" stroke="#e3141f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="11" rx="1.5"></rect><path d="M2 19h20"></path></svg>
+  <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" style="position: absolute; left: 1024px; top: 513px" fill="none" stroke="#e3141f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="3.2"></circle><circle cx="5.5" cy="9.5" r="2.2"></circle><circle cx="18.5" cy="9.5" r="2.2"></circle><path d="M6.5 20v-1.5a5.5 5.5 0 0 1 11 0V20z"></path><path d="M2 19v-.5a3.5 3.5 0 0 1 4-3.4M22 19v-.5a3.5 3.5 0 0 0-4-3.4"></path></svg>
+  <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" style="position: absolute; left: 1364px; top: 513px" fill="none" stroke="#e3141f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="18" height="12" rx="1"></rect><path d="M6.5 12l3.5-3.5 2.5 2.5 4.5-4.5"></path><path d="M12 15.5v3M8 21l4-2.5 4 2.5"></path></svg>
+
+  <div style="position: absolute; left: 317px; top: 560px; white-space: nowrap">
+    <div style="font-size: 28.5px; line-height: 34px; font-weight: 800; letter-spacing: -1px; color: #12141c">Day Pass</div>
+    <div style="margin-top: 4px; font-size: 16px; line-height: 19.5px; letter-spacing: -0.4px; color: #2a2c33">A flexible, on-demand workspace<br>for a productive day.</div>
+  </div>
+  <div style="position: absolute; left: 673px; top: 560px; white-space: nowrap">
+    <div style="font-size: 28.5px; line-height: 34px; font-weight: 800; letter-spacing: -1px; color: #fff">Dedicated Desk</div>
+    <div style="margin-top: 4px; font-size: 16px; line-height: 19.5px; letter-spacing: -0.4px; color: rgba(255,255,255,0.95)">Your personal desk in a collaborative,<br>professional environment.</div>
+  </div>
+  <div style="position: absolute; left: 1012px; top: 560px; white-space: nowrap">
+    <div style="font-size: 28.5px; line-height: 34px; font-weight: 800; letter-spacing: -1px; color: #12141c">Private Cabin</div>
+    <div style="margin-top: 4px; font-size: 16px; line-height: 19.5px; letter-spacing: -0.4px; color: #2a2c33">A secure, quiet and fully-furnished<br>space for you or your team.</div>
+  </div>
+  <div style="position: absolute; left: 1352px; top: 560px; white-space: nowrap">
+    <div style="font-size: 28.5px; line-height: 34px; font-weight: 800; letter-spacing: -1px; color: #12141c">Meeting Room</div>
+    <div style="margin-top: 4px; font-size: 16px; line-height: 19.5px; letter-spacing: -0.4px; color: #2a2c33">Professional, tech-enabled rooms<br>for meetings, presentations &amp; more.</div>
+  </div>
+
+  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" style="position: absolute; left: 316px; top: 663px" fill="none" stroke="#e3141f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"></circle><path d="M7.5 12.5l3 3 6-6.5"></path></svg>
+  <div style="position: absolute; left: 343px; top: 663px; font-size: 13px; line-height: 20px; font-weight: 600; letter-spacing: -0.55px; white-space: nowrap; color: #14161d">Hot Desk Access</div>
+  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" style="position: absolute; left: 470px; top: 663px" fill="none" stroke="#e3141f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"></circle><path d="M7.5 12.5l3 3 6-6.5"></path></svg>
+  <div style="position: absolute; left: 497px; top: 663px; font-size: 13px; line-height: 20px; font-weight: 600; letter-spacing: -0.55px; white-space: nowrap; color: #14161d">High-Speed Wi-Fi</div>
+  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" style="position: absolute; left: 673px; top: 663px"><circle cx="12" cy="12" r="11" fill="#fff"></circle><path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="#e3141f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+  <div style="position: absolute; left: 700px; top: 663px; font-size: 13px; line-height: 20px; font-weight: 600; letter-spacing: -0.55px; white-space: nowrap; color: #fff">Reserved Desk</div>
+  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" style="position: absolute; left: 836px; top: 663px"><circle cx="12" cy="12" r="11" fill="#fff"></circle><path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="#e3141f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+  <div style="position: absolute; left: 863px; top: 663px; font-size: 13px; line-height: 20px; font-weight: 600; letter-spacing: -0.55px; white-space: nowrap; color: #fff">24/7 Access</div>
+  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" style="position: absolute; left: 1011px; top: 663px" fill="none" stroke="#e3141f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"></circle><path d="M7.5 12.5l3 3 6-6.5"></path></svg>
+  <div style="position: absolute; left: 1038px; top: 663px; font-size: 13px; line-height: 20px; font-weight: 600; letter-spacing: -0.55px; white-space: nowrap; color: #14161d">Lockable &amp; Private</div>
+  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" style="position: absolute; left: 1176px; top: 663px" fill="none" stroke="#e3141f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"></circle><path d="M7.5 12.5l3 3 6-6.5"></path></svg>
+  <div style="position: absolute; left: 1203px; top: 663px; font-size: 13px; line-height: 20px; font-weight: 600; letter-spacing: -0.55px; white-space: nowrap; color: #14161d">Custom Setup</div>
+  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" style="position: absolute; left: 1351px; top: 663px" fill="none" stroke="#e3141f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"></circle><path d="M7.5 12.5l3 3 6-6.5"></path></svg>
+  <div style="position: absolute; left: 1378px; top: 663px; font-size: 13px; line-height: 20px; font-weight: 600; letter-spacing: -0.55px; white-space: nowrap; color: #14161d">Multiple Capacities</div>
+  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" style="position: absolute; left: 1528px; top: 663px" fill="none" stroke="#e3141f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"></circle><path d="M7.5 12.5l3 3 6-6.5"></path></svg>
+  <div style="position: absolute; left: 1555px; top: 663px; font-size: 13px; line-height: 20px; font-weight: 600; letter-spacing: -0.55px; white-space: nowrap; color: #14161d">AV &amp; Display</div>
+
+  <a href="#faq" style="position: absolute; left: 315px; top: 702px; width: 240px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 16.5px; font-weight: 700; letter-spacing: -0.5px; color: #12141c">Request Day Pass Quote</a>
+  <a href="#faq" style="position: absolute; left: 672px; top: 702px; width: 272px; height: 44px; display: flex; align-items: center; padding-left: 56px; box-sizing: border-box; gap: 34px; font-size: 16.5px; font-weight: 700; letter-spacing: -0.5px; color: #e3141f">Request Desk Quote <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e3141f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+  <a href="#faq" style="position: absolute; left: 1010px; top: 702px; width: 252px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 16.5px; font-weight: 700; letter-spacing: -0.5px; color: #12141c">Request Cabin Quote</a>
+  <a href="#faq" style="position: absolute; left: 1350px; top: 702px; width: 258px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 16.5px; font-weight: 700; letter-spacing: -0.5px; color: #12141c">Request Room Quote</a>
+
+  <svg aria-hidden="true" width="50" height="50" viewBox="0 0 24 24" style="position: absolute; left: 316px; top: 814px" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"></path><rect x="3" y="13" width="4" height="6" rx="1.5"></rect><rect x="17" y="13" width="4" height="6" rx="1.5"></rect><path d="M19 19c0 2-2 2.5-4.5 2.5H12"></path></svg>
+  <div style="position: absolute; left: 383px; top: 811px; font-size: 26px; line-height: 32px; font-weight: 800; letter-spacing: -0.9px; white-space: nowrap; color: #fff">Need a Custom Workspace Plan?</div>
+  <div style="position: absolute; left: 383px; top: 846px; font-size: 14px; line-height: 20px; letter-spacing: -0.4px; white-space: nowrap; color: rgba(255,255,255,0.92)">Tell us your requirements and we’ll create a tailored solution for you.</div>
+
+  <svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" style="position: absolute; left: 862px; top: 822px" fill="none" stroke="#e3141f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+  <svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" style="position: absolute; left: 1018px; top: 821px" fill="none" stroke="#e3141f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"></path></svg>
+  <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" style="position: absolute; left: 1181px; top: 819px" fill="none" stroke="#e3141f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="3.2"></circle><circle cx="5.5" cy="9.5" r="2.2"></circle><circle cx="18.5" cy="9.5" r="2.2"></circle><path d="M6.5 20v-1.5a5.5 5.5 0 0 1 11 0V20z"></path><path d="M2 19v-.5a3.5 3.5 0 0 1 4-3.4M22 19v-.5a3.5 3.5 0 0 0-4-3.4"></path></svg>
+  <div style="position: absolute; left: 907px; top: 819px; font-size: 15.5px; line-height: 19.5px; font-weight: 600; letter-spacing: -0.4px; white-space: nowrap">Multiple<br><span style="font-weight: 500; color: #4b4f5a">Locations</span></div>
+  <div style="position: absolute; left: 1063px; top: 819px; font-size: 15.5px; line-height: 19.5px; font-weight: 600; letter-spacing: -0.4px; white-space: nowrap">Quick<br><span style="font-weight: 500; color: #4b4f5a">Onboarding</span></div>
+  <div style="position: absolute; left: 1233px; top: 819px; font-size: 15.5px; line-height: 19.5px; font-weight: 600; letter-spacing: -0.4px; white-space: nowrap">Dedicated<br><span style="font-weight: 500; color: #4b4f5a">Support</span></div>
+
+  <a href="#faq" style="position: absolute; left: 1348px; top: 815px; width: 289px; height: 50px; border-radius: 25px; display: flex; align-items: center; padding-left: 36px; box-sizing: border-box; gap: 16px; font-size: 18px; font-weight: 600; letter-spacing: -0.4px; color: #fff; white-space: nowrap">Request a Custom Quote <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></a>
+</div>
+    </div>
+  </div>
+  <div class="fluid">
+  <div class="container">
+    <div class="split-head reveal">
+      <div>
+        <p class="eyebrow eyebrow-grey"><span class="eyebrow-line"></span>MEMBERSHIP &amp; PRICING</p>
+        <h2 class="h2 h2-heavy">Flexible Workspace Plans<br>for <em class="text-red">Every Work Style.</em></h2>
+      </div>
+      <p class="split-text">Choose a workspace plan that fits your team size, work style and business goals. Flexible, scalable and packed with premium amenities.</p>
+    </div>
+    <div class="price-tools reveal">
+      <ul class="mini-points">
+        <li><svg class="ic ic-red"><use href="#i-calendar"/></svg>Flexible<br>Tenure</li>
+        <li><svg class="ic ic-red"><use href="#i-users"/></svg>Scalable<br>for Teams</li>
+        <li><svg class="ic ic-red"><use href="#i-diamond"/></svg>All Premium<br>Amenities</li>
+        <li><svg class="ic ic-red"><use href="#i-shield"/></svg>Hassle-Free<br>Setup</li>
+      </ul>
+      <div class="plan-toggle" role="group" aria-label="Choose a plan">
+        <span class="plan-toggle-label">Choose a Plan:</span>
+        <button type="button" class="is-active" aria-pressed="true" data-plan="monthly"><svg class="ic"><use href="#i-calendar"/></svg>Monthly</button>
+        <button type="button" aria-pressed="false" data-plan="quarterly"><svg class="ic"><use href="#i-calendar"/></svg>Quarterly</button>
+        <button type="button" aria-pressed="false" data-plan="yearly"><svg class="ic"><use href="#i-calendar"/></svg>Yearly</button>
+      </div>
+    </div>
+    <div class="plan-grid">
+      <article class="plan-card reveal">
+        <div class="plan-img"><img src="assets/images/plan-day-pass.jpg" alt="Day pass lounge with laptop" loading="lazy" width="326" height="126"></div>
+        <span class="tile tile-white"><svg class="ic"><use href="#i-calendar"/></svg></span>
+        <h3>Day Pass</h3>
+        <p>A flexible, on-demand workspace for a productive day.</p>
+        <ul class="plan-feats"><li><svg class="ic"><use href="#i-check"/></svg>Hot Desk Access</li><li><svg class="ic"><use href="#i-check"/></svg>High-Speed Wi-Fi</li></ul>
+        <a href="#visit" class="plan-btn">Request Day Pass Quote <span class="btn-circle btn-circle-red"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+      </article>
+      <article class="plan-card is-popular reveal" data-delay="1">
+        <span class="popular-badge"><svg class="ic"><use href="#i-crown"/></svg>Most Popular</span>
+        <div class="plan-img"><img src="assets/images/plan-dedicated-desk.jpg" alt="Dedicated desks" loading="lazy" width="312" height="104"></div>
+        <span class="tile tile-white"><svg class="ic"><use href="#i-laptop"/></svg></span>
+        <h3>Dedicated Desk</h3>
+        <p>Your personal desk in a collaborative, professional environment.</p>
+        <ul class="plan-feats"><li><svg class="ic"><use href="#i-check"/></svg>Reserved Desk</li><li><svg class="ic"><use href="#i-check"/></svg>24/7 Access</li></ul>
+        <a href="#visit" class="plan-btn">Request Desk Quote <svg class="ic"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="plan-card reveal" data-delay="2">
+        <div class="plan-img"><img src="assets/images/plan-private-cabin.jpg" alt="Private cabin" loading="lazy" width="312" height="126"></div>
+        <span class="tile tile-white"><svg class="ic"><use href="#i-users"/></svg></span>
+        <h3>Private Cabin</h3>
+        <p>A secure, quiet and fully-furnished space for you or your team.</p>
+        <ul class="plan-feats"><li><svg class="ic"><use href="#i-check"/></svg>Lockable &amp; Private</li><li><svg class="ic"><use href="#i-check"/></svg>Custom Setup</li></ul>
+        <a href="#visit" class="plan-btn">Request Cabin Quote <span class="btn-circle btn-circle-red"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+      </article>
+      <article class="plan-card reveal" data-delay="3">
+        <div class="plan-img"><img src="assets/images/plan-meeting-room.jpg" alt="Meeting room" loading="lazy" width="306" height="126"></div>
+        <span class="tile tile-white"><svg class="ic"><use href="#i-presentation"/></svg></span>
+        <h3>Meeting Room</h3>
+        <p>Professional, tech-enabled rooms for meetings, presentations &amp; more.</p>
+        <ul class="plan-feats"><li><svg class="ic"><use href="#i-check"/></svg>Multiple Capacities</li><li><svg class="ic"><use href="#i-check"/></svg>AV &amp; Display</li></ul>
+        <a href="#visit" class="plan-btn">Request Room Quote <span class="btn-circle btn-circle-red"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+      </article>
+    </div>
+    <div class="custom-plan reveal">
+      <div class="custom-plan-red">
+        <svg class="ic ic-xl"><use href="#i-headset"/></svg>
+        <div><h3>Need a Custom Workspace Plan?</h3><p>Tell us your requirements and we’ll create a tailored solution for you.</p></div>
+      </div>
+      <ul class="custom-plan-points">
+        <li><svg class="ic ic-red"><use href="#i-pin"/></svg><span><strong>Multiple</strong>Locations</span></li>
+        <li><svg class="ic ic-red"><use href="#i-bolt"/></svg><span><strong>Quick</strong>Onboarding</span></li>
+        <li><svg class="ic ic-red"><use href="#i-users"/></svg><span><strong>Dedicated</strong>Support</span></li>
+      </ul>
+      <a href="#visit" class="btn btn-navy">Request a Custom Quote <svg class="ic"><use href="#i-chev-r"/></svg></a>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ============ 7. COMMUNITY ============ -->
+<section class="section dark-navy community" id="community">
+  <div class="exact reveal" style="--h: 927; --edge: #200c1e">
+    <div class="exact-stage">
+<div style="position: relative; width: 1920px; height: 927px; overflow: hidden; background: #14101a; font-family: 'DM Sans', sans-serif; color: #fff">
+  <img src="assets/images/bg-community.jpg" alt="ACE Spaces members talking around a table; member portraits" class="exact-bg" width="1920" height="927">
+
+  <div style="position: absolute; left: 443px; top: 122px; font-size: 16px; line-height: 22px; font-weight: 700; letter-spacing: 0.7px; color: #fff">COMMUNITY &amp; TESTIMONIALS</div>
+  <h2 style="position: absolute; left: 387px; top: 148px; margin: 0; font-size: 46px; line-height: 46px; font-weight: 800; font-style: italic; letter-spacing: -1px; white-space: nowrap; color: #fff">A Thriving Community of<br><span style="color: #f0141f">Professionals &amp; Builders.</span></h2>
+  <p style="position: absolute; left: 389px; top: 251px; margin: 0; font-size: 16.5px; line-height: 21px; letter-spacing: -0.2px; white-space: nowrap; color: #ebe9ef">More than a workspace — ACE Spaces brings together<br>entrepreneurs, creators, and growing teams to connect,<br>collaborate and create new opportunities.</p>
+
+  <div style="position: absolute; left: 436px; top: 337px; font-size: 14px; line-height: 17.5px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Network &amp;<br>Collaborate</div>
+  <div style="position: absolute; left: 573px; top: 337px; font-size: 14px; line-height: 17.5px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Share<br>Ideas</div>
+  <div style="position: absolute; left: 685px; top: 337px; font-size: 14px; line-height: 17.5px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Grow<br>Together</div>
+  <div style="position: absolute; left: 818px; top: 337px; font-size: 14px; line-height: 17.5px; font-weight: 600; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Community<br>Events</div>
+
+  <div class="x-slider" id="xSlider" style="position: absolute; left: 320px; top: 400px; width: 1280px; height: 280px" aria-roledescription="carousel" aria-label="Member testimonials">
+    <article class="xs-card" data-pos="0" aria-roledescription="slide" aria-label="1 of 3">
+      <img src="assets/images/member-aman.jpg" alt="" class="xs-av xs-av-circle" width="116" height="116">
+      <span class="xs-av xs-av-panel"><img src="assets/images/member-aman.jpg" alt="" class="xs-pimg xs-pimg-aman" width="165" height="214"></span>
+      <div class="xs-body">
+        <div class="xs-top"><svg class="ic xs-quote"><use href="#i-quote"/></svg><span class="stars" aria-label="5 out of 5 stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span></div>
+        <blockquote>ACE Spaces gives us the<br>perfect mix of a professional<br>setup and a collaborative<br>community.</blockquote>
+        <p class="xs-name">Aman Verma</p>
+        <p class="xs-role">Founder, TechBridge</p>
+      </div>
+    </article>
+    <article class="xs-card" data-pos="1" aria-roledescription="slide" aria-label="2 of 3">
+      <img src="assets/images/member-neha.jpg" alt="" class="xs-av xs-av-circle" width="116" height="116">
+      <span class="xs-av xs-av-panel"><img src="assets/images/member-neha.jpg" alt="" class="xs-pimg xs-pimg-neha" width="165" height="214"></span>
+      <div class="xs-body">
+        <div class="xs-top"><svg class="ic xs-quote"><use href="#i-quote"/></svg><span class="stars" aria-label="5 out of 5 stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span></div>
+        <blockquote>A premium workspace with<br>great amenities, a positive<br>vibe and amazing people<br>to connect with.</blockquote>
+        <p class="xs-name">Neha Bansal</p>
+        <p class="xs-role">Co-founder, DesignLoop</p>
+      </div>
+    </article>
+    <article class="xs-card" data-pos="2" aria-roledescription="slide" aria-label="3 of 3">
+      <img src="assets/images/member-rohit.jpg" alt="" class="xs-av xs-av-circle" width="116" height="116">
+      <span class="xs-av xs-av-panel"><img src="assets/images/member-rohit.jpg" alt="" class="xs-pimg xs-pimg-rohit" width="165" height="214"></span>
+      <div class="xs-body">
+        <div class="xs-top"><svg class="ic xs-quote"><use href="#i-quote"/></svg><span class="stars" aria-label="5 out of 5 stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span></div>
+        <blockquote>Our team’s productivity<br>has gone up significantly<br>since we moved to<br>ACE Spaces.</blockquote>
+        <p class="xs-name">Rohit Mehra</p>
+        <p class="xs-role">CEO, GrowthX Digital</p>
+      </div>
+    </article>
+    <span class="xs-badge"><svg class="ic"><use href="#i-crown"/></svg>Featured Member</span>
+    <button type="button" class="xs-btn xs-prev" aria-label="Previous testimonial"><svg class="ic"><use href="#i-chev-l"/></svg></button>
+    <button type="button" class="xs-btn xs-next" aria-label="Next testimonial"><svg class="ic"><use href="#i-chev-r"/></svg></button>
+    <div class="xs-dots" role="tablist" aria-label="Choose testimonial"></div>
+  </div>
+
+  <div style="position: absolute; left: 517px; top: 694px; white-space: nowrap; color: #fff">
+    <div style="font-size: 28.5px; line-height: 34px; font-weight: 800; letter-spacing: -0.6px"><span class="counter" data-target="500">500</span>+</div>
+    <div style="font-size: 15.5px; line-height: 19px; letter-spacing: -0.2px; color: #ecebf0">Happy Members</div>
+  </div>
+  <div style="position: absolute; left: 783px; top: 694px; white-space: nowrap; color: #fff">
+    <div style="font-size: 28.5px; line-height: 34px; font-weight: 800; letter-spacing: -0.6px"><span class="counter" data-target="3">3</span>+</div>
+    <div style="font-size: 15.5px; line-height: 19px; letter-spacing: -0.2px; color: #ecebf0">Prime Locations</div>
+  </div>
+  <div style="position: absolute; left: 1045px; top: 694px; white-space: nowrap; color: #fff">
+    <div style="font-size: 28.5px; line-height: 34px; font-weight: 800; letter-spacing: -0.6px"><span class="counter" data-target="50">50</span>+</div>
+    <div style="font-size: 15.5px; line-height: 19px; letter-spacing: -0.2px; color: #ecebf0">Community Events</div>
+  </div>
+  <div style="position: absolute; left: 1331px; top: 694px; white-space: nowrap; color: #fff">
+    <div style="font-size: 28.5px; line-height: 34px; font-weight: 800; letter-spacing: -0.6px"><span class="counter" data-target="100">100</span>+</div>
+    <div style="font-size: 15.5px; line-height: 19px; letter-spacing: -0.2px; color: #ecebf0">Business Collaborations</div>
+  </div>
+
+  <a href="#faq" style="position: absolute; left: 775px; top: 794px; width: 370px; height: 53px; border-radius: 27px; display: flex; align-items: center; padding-left: 31px; box-sizing: border-box; font-size: 21px; font-weight: 700; letter-spacing: -0.5px; white-space: nowrap; color: #fff">Join Our Community Today</a>
+</div>
+    </div>
+  </div>
+  <div class="fluid">
+  <div class="container">
+    <div class="com-top">
+      <div class="reveal">
+        <p class="eyebrow eyebrow-white"><span class="eyebrow-line"></span>COMMUNITY &amp; TESTIMONIALS</p>
+        <h2 class="h2 h2-light h2-italic">A Thriving Community of<br><span class="text-red">Professionals &amp; Builders.</span></h2>
+        <p class="lead lead-light">More than a workspace — ACE Spaces brings together entrepreneurs, creators, and growing teams to connect, collaborate and create new opportunities.</p>
+        <ul class="mini-points mini-points-dark">
+          <li><svg class="ic ic-red"><use href="#i-users"/></svg>Network &amp;<br>Collaborate</li>
+          <li><svg class="ic ic-red"><use href="#i-bulb"/></svg>Share<br>Ideas</li>
+          <li><svg class="ic ic-red"><use href="#i-grow"/></svg>Grow<br>Together</li>
+          <li><svg class="ic ic-red"><use href="#i-calendar-star"/></svg>Community<br>Events</li>
         </ul>
       </div>
+      <div class="com-photo reveal" data-delay="1"><img src="assets/images/community-team.jpg" alt="ACE Spaces members talking around a table" loading="lazy" width="676" height="318"></div>
+    </div>
 
-      <div class="testi rv">
-        <button type="button" class="testi__nav testi__nav--prev" id="tPrev" aria-label="Previous testimonial"><svg><use href="#i-chev"/></svg></button>
-        <div class="testi__track" id="tTrack">
-          <figure class="tcard" data-i="0">
-            <img class="tcard__av" src="images/avatar-aman.jpg" alt="Aman Verma" width="216" height="216">
-            <div><div class="tcard__top"><svg class="tcard__q"><use href="#i-quote"/></svg><span class="stars" aria-label="5 stars">★★★★★</span></div>
+    <div class="slider" id="testimonials">
+      <button type="button" class="slider-btn slider-prev" aria-label="Previous testimonial"><svg class="ic"><use href="#i-chev-l"/></svg></button>
+      <div class="slider-track" id="sliderTrack">
+        <article class="t-card">
+          <img src="assets/images/member-aman.jpg" alt="Aman Verma" class="t-avatar" loading="lazy" width="118" height="132">
+          <div class="t-body">
+            <div class="t-top"><svg class="ic t-quote"><use href="#i-quote"/></svg><span class="stars" aria-label="5 out of 5 stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span></div>
             <blockquote>ACE Spaces gives us the perfect mix of a professional setup and a collaborative community.</blockquote>
-            <figcaption><b>Aman Verma</b>Founder, TechBridge</figcaption></div>
-          </figure>
-          <figure class="tcard is-feat" data-i="1">
-            <span class="tcard__badge"><svg><use href="#i-crown"/></svg>Featured Member</span>
-            <img class="tcard__av tcard__av--tall" src="images/avatar-neha.jpg" alt="Neha Bansal" width="240" height="340">
-            <div><div class="tcard__top"><svg class="tcard__q"><use href="#i-quote"/></svg><span class="stars" aria-label="5 stars">★★★★★</span></div>
+            <p class="t-name">Aman Verma</p><p class="t-role">Founder, TechBridge</p>
+          </div>
+        </article>
+        <article class="t-card is-featured">
+          <span class="popular-badge popular-badge-sm"><svg class="ic"><use href="#i-crown"/></svg>Featured Member</span>
+          <img src="assets/images/member-neha.jpg" alt="Neha Bansal" class="t-avatar" loading="lazy" width="148" height="194">
+          <div class="t-body">
+            <div class="t-top"><svg class="ic t-quote"><use href="#i-quote"/></svg><span class="stars" aria-label="5 out of 5 stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span></div>
             <blockquote>A premium workspace with great amenities, a positive vibe and amazing people to connect with.</blockquote>
-            <figcaption><b>Neha Bansal</b>Co-founder, DesignLoop</figcaption></div>
-          </figure>
-          <figure class="tcard" data-i="2">
-            <img class="tcard__av" src="images/avatar-rohit.jpg" alt="Rohit Mehra" width="216" height="216">
-            <div><div class="tcard__top"><svg class="tcard__q"><use href="#i-quote"/></svg><span class="stars" aria-label="5 stars">★★★★★</span></div>
-            <blockquote>Our team's productivity has gone up significantly since we moved to ACE Spaces.</blockquote>
-            <figcaption><b>Rohit Mehra</b>CEO, GrowthX Digital</figcaption></div>
-          </figure>
-        </div>
-        <button type="button" class="testi__nav testi__nav--next" id="tNext" aria-label="Next testimonial"><svg><use href="#i-chev"/></svg></button>
-        <div class="testi__dots" id="tDots"><button aria-label="Testimonial 1"></button><button class="is-on" aria-label="Testimonial 2"></button><button aria-label="Testimonial 3"></button></div>
+            <p class="t-name">Neha Bansal</p><p class="t-role">Co-founder, DesignLoop</p>
+          </div>
+        </article>
+        <article class="t-card">
+          <img src="assets/images/member-rohit.jpg" alt="Rohit Mehra" class="t-avatar" loading="lazy" width="117" height="132">
+          <div class="t-body">
+            <div class="t-top"><svg class="ic t-quote"><use href="#i-quote"/></svg><span class="stars" aria-label="5 out of 5 stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span></div>
+            <blockquote>Our team’s productivity has gone up significantly since we moved to ACE Spaces.</blockquote>
+            <p class="t-name">Rohit Mehra</p><p class="t-role">CEO, GrowthX Digital</p>
+          </div>
+        </article>
       </div>
-
-      <ul class="cstats rv">
-        <li><svg><use href="#i-users"/></svg><span><b><span class="count" data-to="500">0</span>+</b>Happy Members</span></li>
-        <li><svg><use href="#i-building"/></svg><span><b><span class="count" data-to="3">0</span>+</b>Prime Locations</span></li>
-        <li><svg><use href="#i-calstar"/></svg><span><b><span class="count" data-to="50">0</span>+</b>Community Events</span></li>
-        <li><svg><use href="#i-hand"/></svg><span><b><span class="count" data-to="100">0</span>+</b>Business Collaborations</span></li>
-      </ul>
-      <div class="center rv"><a href="#" class="btn btn--redpill btn--glow js-open-visit">Join Our Community Today<span class="btn__dot"><svg><use href="#i-arrow"/></svg></span></a></div>
-      <span class="comm__wave comm__wave--l" aria-hidden="true"></span><span class="comm__wave comm__wave--r" aria-hidden="true"></span>
+      <button type="button" class="slider-btn slider-next" aria-label="Next testimonial"><svg class="ic"><use href="#i-chev-r"/></svg></button>
+      <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Testimonials"></div>
     </div>
+
+    <ul class="stats-bar reveal">
+      <li><svg class="ic ic-red"><use href="#i-users"/></svg><div><strong><span class="counter" data-target="500">500</span>+</strong>Happy Members</div></li>
+      <li><svg class="ic ic-red"><use href="#i-office"/></svg><div><strong><span class="counter" data-target="3">3</span>+</strong>Prime Locations</div></li>
+      <li><svg class="ic ic-red"><use href="#i-calendar-star"/></svg><div><strong><span class="counter" data-target="50">50</span>+</strong>Community Events</div></li>
+      <li><svg class="ic ic-red"><use href="#i-handshake"/></svg><div><strong><span class="counter" data-target="100">100</span>+</strong>Business Collaborations</div></li>
+    </ul>
+    <div class="center reveal"><a href="#visit" class="btn btn-red btn-pill btn-shine btn-lg btn-glow">Join Our Community Today <span class="btn-circle"><svg class="ic"><use href="#i-arrow"/></svg></span></a></div>
+  </div>
+  <div class="swoosh swoosh-red" aria-hidden="true"></div>
   </div>
 </section>
 
-<!-- ================= 8. FAQ + VISIT ================= -->
-<section class="faqs light" id="faq">
-  <div class="wrap">
-    <div class="faqs__head rv">
-      <p class="eyebrow eyebrow--center">FAQs &amp; Book a Visit</p>
-      <h2 class="h2 h2--navy">Got Questions? We've Got You <em class="red">Covered.</em></h2>
-      <p>Find quick answers or visit our workspace to experience ACE Spaces in person.</p>
+<!-- ============ 8. FAQ + BOOK A VISIT ============ -->
+<section class="section light faq" id="faq">
+  <div class="exact reveal" style="--h: 835; --edge: #fefaf8">
+    <div class="exact-stage">
+<div style="position: relative; width: 1920px; height: 835px; overflow: hidden; background: #fcf6f5; font-family: 'DM Sans', sans-serif; color: #12141c">
+  <img src="assets/images/bg-faq.jpg" alt="ACE Spaces reception with red lounge chairs" class="exact-bg" width="1920" height="835">
+
+  <div style="position: absolute; left: 865px; top: 80px; font-size: 19px; line-height: 26px; font-weight: 700; letter-spacing: -0.3px; white-space: nowrap; color: #12141c">FAQS &amp; BOOK A VISIT</div>
+  <h2 style="position: absolute; left: 0; top: 112px; width: 1920px; margin: 0; text-align: center; font-size: 48px; line-height: 56px; font-weight: 800; letter-spacing: -1.6px; white-space: nowrap; color: #12141c">Got Questions? We’ve Got You <span style="color: #e3141f; font-style: italic">Covered.</span></h2>
+  <p style="position: absolute; left: 0; top: 169px; width: 1920px; margin: 0; text-align: center; font-size: 20px; line-height: 26px; letter-spacing: -0.3px; color: #1d1f27">Find quick answers or visit our workspace to experience ACE Spaces in person.</p>
+
+  <div style="position: absolute; left: 443px; top: 237px; font-size: 29.5px; line-height: 38px; font-weight: 800; letter-spacing: -1.1px; white-space: nowrap">Frequently Asked Questions</div>
+  <div style="position: absolute; left: 443px; top: 280px; font-size: 18.5px; line-height: 24px; letter-spacing: -0.3px; white-space: nowrap; color: #1d1f27">Quick answers to help you choose the right workspace.</div>
+
+  <div class="x-acc accordion" style="position: absolute; left: 328px; top: 334px; width: 624px">
+    <div class="acc-item is-open">
+      <button type="button" class="acc-btn" aria-expanded="true" aria-controls="xfaq1" id="xfaq1-btn"><span class="acc-num">01</span><span class="acc-q">What types of workspace plans do you offer?</span><span class="acc-icon"><svg class="ic"><use href="#i-chev-d"/></svg></span></button>
+      <div class="acc-panel" id="xfaq1" role="region" aria-labelledby="xfaq1-btn"><div class="acc-inner"><p>We offer flexible plans including Day Pass, Dedicated Desk, Private Cabin, and<br>Meeting Room — designed for individuals, teams, and growing businesses.</p></div></div>
     </div>
-    <div class="faqs__grid">
-      <div class="rv">
-        <div class="faqs__title"><span class="ic-qa"><svg><use href="#i-qa"/></svg></span><span><b>Frequently Asked Questions</b><small>Quick answers to help you choose the right workspace.</small></span></div>
-        <div class="acc" id="acc">
-          <div class="acc__item is-open"><button type="button" class="acc__q" aria-expanded="true"><span class="acc__n">01</span><span class="acc__t">What types of workspace plans do you offer?</span><span class="acc__ic"><svg><use href="#i-chevdown"/></svg></span></button><div class="acc__a"><div><p>We offer flexible plans including Day Pass, Dedicated Desk, Private Cabin, and Meeting Room — designed for individuals, teams, and growing businesses.</p></div></div></div>
-          <div class="acc__item"><button type="button" class="acc__q" aria-expanded="false"><span class="acc__n">02</span><span class="acc__t">Can I book a tour before choosing a plan?</span><span class="acc__ic"><svg><use href="#i-chevdown"/></svg></span></button><div class="acc__a"><div><p>Absolutely. Book a free guided tour at Mohali or Zirakpur — see the space, test the Wi-Fi and meet our team before you decide.</p></div></div></div>
-          <div class="acc__item"><button type="button" class="acc__q" aria-expanded="false"><span class="acc__n">03</span><span class="acc__t">Is the workspace accessible 24/7?</span><span class="acc__ic"><svg><use href="#i-chevdown"/></svg></span></button><div class="acc__a"><div><p>Yes. Members get secure 24/7 access. Our front desk is staffed Mon–Sat, 9 AM – 8 PM.</p></div></div></div>
-          <div class="acc__item"><button type="button" class="acc__q" aria-expanded="false"><span class="acc__n">04</span><span class="acc__t">Do you provide meeting rooms and event spaces?</span><span class="acc__ic"><svg><use href="#i-chevdown"/></svg></span></button><div class="acc__a"><div><p>Yes. Tech-enabled meeting rooms and conference rooms with AV &amp; display are available by the hour, along with event spaces for meetups and workshops.</p></div></div></div>
-          <div class="acc__item"><button type="button" class="acc__q" aria-expanded="false"><span class="acc__n">05</span><span class="acc__t">Can I upgrade or change my plan later?</span><span class="acc__ic"><svg><use href="#i-chevdown"/></svg></span></button><div class="acc__a"><div><p>Of course. Plans are flexible — add seats, move from a desk to a private cabin, or switch billing periods as your team grows.</p></div></div></div>
-          <div class="acc__item"><button type="button" class="acc__q" aria-expanded="false"><span class="acc__n">06</span><span class="acc__t">What amenities are included in the membership?</span><span class="acc__ic"><svg><use href="#i-chevdown"/></svg></span></button><div class="acc__a"><div><p>High-speed Wi-Fi, power backup, air-conditioning, printing support, café &amp; refreshments, daily housekeeping, reception, security and ample parking.</p></div></div></div>
+    <div class="acc-item">
+      <button type="button" class="acc-btn" aria-expanded="false" aria-controls="xfaq2" id="xfaq2-btn"><span class="acc-num">02</span><span class="acc-q">Can I book a tour before choosing a plan?</span><span class="acc-icon"><svg class="ic"><use href="#i-chev-d"/></svg></span></button>
+      <div class="acc-panel" id="xfaq2" role="region" aria-labelledby="xfaq2-btn"><div class="acc-inner"><p>Yes. Book a guided tour of our Mohali or Zirakpur workspace and our team will walk you through the spaces and help you pick the right plan.</p></div></div>
+    </div>
+    <div class="acc-item">
+      <button type="button" class="acc-btn" aria-expanded="false" aria-controls="xfaq3" id="xfaq3-btn"><span class="acc-num">03</span><span class="acc-q">Is the workspace accessible 24/7?</span><span class="acc-icon"><svg class="ic"><use href="#i-chev-d"/></svg></span></button>
+      <div class="acc-panel" id="xfaq3" role="region" aria-labelledby="xfaq3-btn"><div class="acc-inner"><p>Yes, members get secure 24/7 access. Our front desk is available Mon–Sat, 9 AM – 8 PM.</p></div></div>
+    </div>
+    <div class="acc-item">
+      <button type="button" class="acc-btn" aria-expanded="false" aria-controls="xfaq4" id="xfaq4-btn"><span class="acc-num">04</span><span class="acc-q">Do you provide meeting rooms and event spaces?</span><span class="acc-icon"><svg class="ic"><use href="#i-chev-d"/></svg></span></button>
+      <div class="acc-panel" id="xfaq4" role="region" aria-labelledby="xfaq4-btn"><div class="acc-inner"><p>Yes. We have tech-enabled meeting and conference rooms in multiple capacities, plus event spaces for workshops and community events.</p></div></div>
+    </div>
+    <div class="acc-item">
+      <button type="button" class="acc-btn" aria-expanded="false" aria-controls="xfaq5" id="xfaq5-btn"><span class="acc-num">05</span><span class="acc-q">Can I upgrade or change my plan later?</span><span class="acc-icon"><svg class="ic"><use href="#i-chev-d"/></svg></span></button>
+      <div class="acc-panel" id="xfaq5" role="region" aria-labelledby="xfaq5-btn"><div class="acc-inner"><p>Absolutely. Our plans are flexible and scalable — move from a desk to a cabin or a bigger team space as you grow.</p></div></div>
+    </div>
+    <div class="acc-item">
+      <button type="button" class="acc-btn" aria-expanded="false" aria-controls="xfaq6" id="xfaq6-btn"><span class="acc-num">06</span><span class="acc-q">What amenities are included in the membership?</span><span class="acc-icon"><svg class="ic"><use href="#i-chev-d"/></svg></span></button>
+      <div class="acc-panel" id="xfaq6" role="region" aria-labelledby="xfaq6-btn"><div class="acc-inner"><p>High-speed internet, meeting rooms, café &amp; lounge, printing support, daily housekeeping, air-conditioning, 24/7 security and ample parking.</p></div></div>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 1138px; top: 481px; font-size: 38.5px; line-height: 46px; font-weight: 800; letter-spacing: -1.2px; white-space: nowrap; color: #fff">Book a Visit</div>
+  <p style="position: absolute; left: 1139px; top: 530px; margin: 0; font-size: 18px; line-height: 25px; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Experience the space, meet our team, and find the<br>perfect workspace for your needs.</p>
+  <div style="position: absolute; left: 1081px; top: 604px; font-size: 13.5px; line-height: 17.5px; font-weight: 500; letter-spacing: -0.2px; white-space: nowrap; color: #fff">Explore<br>Amenities</div>
+  <div style="position: absolute; left: 1248px; top: 604px; font-size: 13.5px; line-height: 17.5px; font-weight: 500; letter-spacing: -0.2px; white-space: nowrap; color: #fff">Get a<br>Personalized Tour</div>
+  <div style="position: absolute; left: 1456px; top: 604px; font-size: 13.5px; line-height: 17.5px; font-weight: 500; letter-spacing: -0.2px; white-space: nowrap; color: #fff">Discuss<br>Your Requirements</div>
+
+  <a href="#faq" style="position: absolute; left: 1102px; top: 667px; width: 382px; height: 60px; padding-left: 81px; box-sizing: border-box; display: flex; align-items: center; font-size: 24.5px; font-weight: 700; letter-spacing: -0.6px; white-space: nowrap; color: #e3141f">Schedule a Visit</a>
+</div>
+    </div>
+  </div>
+  <div class="fluid">
+  <div class="container">
+    <div class="center-head reveal">
+      <p class="eyebrow eyebrow-center"><span class="eyebrow-line"></span>FAQS &amp; BOOK A VISIT<span class="eyebrow-line"></span></p>
+      <h2 class="h2 h2-heavy">Got Questions? We’ve Got You <em class="text-red">Covered.</em></h2>
+      <p class="lead">Find quick answers or visit our workspace to experience ACE Spaces in person.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-col reveal">
+        <div class="faq-head"><span class="tile tile-soft tile-lg"><svg class="ic"><use href="#i-question"/></svg></span><div><h3>Frequently Asked Questions</h3><p>Quick answers to help you choose the right workspace.</p></div></div>
+        <div class="accordion" id="faqList">
+          <div class="acc-item is-open">
+            <button type="button" class="acc-btn" aria-expanded="true" aria-controls="faq1" id="faq1-btn"><span class="acc-num">01</span><span class="acc-q">What types of workspace plans do you offer?</span><span class="acc-icon"><svg class="ic"><use href="#i-chev-d"/></svg></span></button>
+            <div class="acc-panel" id="faq1" role="region" aria-labelledby="faq1-btn"><div class="acc-inner"><p>We offer flexible plans including Day Pass, Dedicated Desk, Private Cabin, and Meeting Room — designed for individuals, teams, and growing businesses.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-btn" aria-expanded="false" aria-controls="faq2" id="faq2-btn"><span class="acc-num">02</span><span class="acc-q">Can I book a tour before choosing a plan?</span><span class="acc-icon"><svg class="ic"><use href="#i-chev-d"/></svg></span></button>
+            <div class="acc-panel" id="faq2" role="region" aria-labelledby="faq2-btn"><div class="acc-inner"><p>Yes. Book a guided tour of our Mohali or Zirakpur workspace and our team will walk you through the spaces and help you pick the right plan.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-btn" aria-expanded="false" aria-controls="faq3" id="faq3-btn"><span class="acc-num">03</span><span class="acc-q">Is the workspace accessible 24/7?</span><span class="acc-icon"><svg class="ic"><use href="#i-chev-d"/></svg></span></button>
+            <div class="acc-panel" id="faq3" role="region" aria-labelledby="faq3-btn"><div class="acc-inner"><p>Yes, members get secure 24/7 access. Our front desk is available Mon–Sat, 9 AM – 8 PM.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-btn" aria-expanded="false" aria-controls="faq4" id="faq4-btn"><span class="acc-num">04</span><span class="acc-q">Do you provide meeting rooms and event spaces?</span><span class="acc-icon"><svg class="ic"><use href="#i-chev-d"/></svg></span></button>
+            <div class="acc-panel" id="faq4" role="region" aria-labelledby="faq4-btn"><div class="acc-inner"><p>Yes. We have tech-enabled meeting and conference rooms in multiple capacities, plus event spaces for workshops and community events.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-btn" aria-expanded="false" aria-controls="faq5" id="faq5-btn"><span class="acc-num">05</span><span class="acc-q">Can I upgrade or change my plan later?</span><span class="acc-icon"><svg class="ic"><use href="#i-chev-d"/></svg></span></button>
+            <div class="acc-panel" id="faq5" role="region" aria-labelledby="faq5-btn"><div class="acc-inner"><p>Absolutely. Our plans are flexible and scalable — move from a desk to a cabin or a bigger team space as you grow.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-btn" aria-expanded="false" aria-controls="faq6" id="faq6-btn"><span class="acc-num">06</span><span class="acc-q">What amenities are included in the membership?</span><span class="acc-icon"><svg class="ic"><use href="#i-chev-d"/></svg></span></button>
+            <div class="acc-panel" id="faq6" role="region" aria-labelledby="faq6-btn"><div class="acc-inner"><p>High-speed internet, meeting rooms, café &amp; lounge, printing support, daily housekeeping, air-conditioning, 24/7 security and ample parking.</p></div></div>
+          </div>
         </div>
       </div>
-      <div class="visit rv">
-        <div class="visit__img" style="background-image:url(images/visit.jpg)"></div>
-        <div class="visit__body">
-          <span class="visit__ic"><svg><use href="#i-cal"/></svg></span>
+      <div class="visit-card reveal" data-delay="1" id="visit">
+        <div class="visit-img"><img src="assets/images/visit-reception.jpg" alt="ACE Spaces reception with red lounge chairs" loading="lazy" width="489" height="212"></div>
+        <div class="visit-body">
+          <span class="tile tile-white tile-xl"><svg class="ic"><use href="#i-calendar"/></svg></span>
           <h3>Book a Visit</h3>
           <p>Experience the space, meet our team, and find the perfect workspace for your needs.</p>
-          <ul class="visit__feat">
-            <li><svg><use href="#i-pin"/></svg>Explore <br>Amenities</li>
-            <li><svg><use href="#i-users"/></svg>Get a <br>Personalized Tour</li>
-            <li><svg><use href="#i-calclock"/></svg>Discuss <br>Your Requirements</li>
+          <ul class="visit-points">
+            <li><svg class="ic"><use href="#i-pin"/></svg>Explore<br>Amenities</li>
+            <li><svg class="ic"><use href="#i-users"/></svg>Get a<br>Personalized Tour</li>
+            <li><svg class="ic"><use href="#i-calendar-clock"/></svg>Discuss<br>Your Requirements</li>
           </ul>
-          <button type="button" class="visit__btn js-open-visit">Schedule a Visit<span class="btn__dot btn__dot--red"><svg><use href="#i-arrow"/></svg></span></button>
+          <a href="tel:+919876543210" class="visit-btn">Schedule a Visit <span class="btn-circle btn-circle-red"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
         </div>
       </div>
     </div>
+  </div>
   </div>
 </section>
+
 </main>
 
-<!-- ================= 9. FOOTER ================= -->
-<footer class="foot" id="contact">
-  <div class="wrap">
-    <div class="fcta rv">
-      <div class="fcta__photo" style="background-image:url(images/cta-lounge.jpg)" aria-hidden="true"></div>
-      <div class="fcta__copy">
-        <p class="eyebrow eyebrow--light">Let's Get Started</p>
-        <h2 class="fcta__h"><em>Ready to find your</em> <br><em class="red">ideal workspace?</em></h2>
-        <p>Join a vibrant, professional community at ACE Spaces. <br>Flexible workspaces, world-class amenities, and prime locations.</p>
-        <div class="fcta__btns">
-          <a href="#" class="btn btn--redpill js-open-visit">Book a Tour<span class="btn__dot"><svg><use href="#i-arrow"/></svg></span></a>
-          <button type="button" class="btn btn--goldline js-quote" data-plan-name="General">Request a Quote <svg class="ic-sm"><use href="#i-arrow"/></svg></button>
-        </div>
-      </div>
-    </div>
+<!-- ============ 9. CTA + FOOTER ============ -->
+<footer class="section site-footer" id="contact">
+  <div class="exact reveal" style="--h: 938; --edge: #1d0d1c">
+    <div class="exact-stage">
+<div style="position: relative; width: 1920px; height: 938px; overflow: hidden; background: #0e0f1a; font-family: 'DM Sans', sans-serif; color: #fff">
+  <img src="assets/images/bg-footer.jpg" alt="ACE Spaces lounge with sofa and red ottomans" class="exact-bg" width="1920" height="938">
 
-    <div class="fgrid">
-      <div class="fbrand rv">
-        <svg class="fbrand__mark"><use href="#logoA"/></svg>
-        <p class="fbrand__name">ACE Spaces</p>
-        <p>A premium coworking space for professionals, entrepreneurs, and growing teams.</p>
-        <p class="fbrand__loc"><svg><use href="#i-pin"/></svg><b>Premium Coworking in <br>Mohali &amp; Zirakpur.</b></p>
-      </div>
-      <div class="fcol rv">
-        <p class="fcol__h">Quick Links</p>
-        <ul class="flinks">
-          <li><a href="#top">Home</a></li><li><a href="#why">About Us</a></li><li><a href="#spaces">Spaces</a></li><li><a href="#membership">Membership</a></li><li><a href="#locations">Locations</a></li><li><a href="#amenities">Amenities</a></li><li><a href="#faq">FAQs</a></li><li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="fcol rv">
-        <p class="fcol__h">Workspace Options</p>
-        <ul class="fopts">
-          <li><a href="#membership"><span><svg><use href="#i-cal"/></svg></span>Day Pass</a></li>
-          <li><a href="#membership"><span><svg><use href="#i-desk"/></svg></span>Dedicated Desk</a></li>
-          <li><a href="#membership"><span><svg><use href="#i-door"/></svg></span>Private Cabin</a></li>
-          <li><a href="#membership"><span><svg><use href="#i-meet"/></svg></span>Meeting Room</a></li>
-          <li><a href="#" class="js-open-visit"><span><svg><use href="#i-calstar"/></svg></span>Book a Visit</a></li>
-        </ul>
-      </div>
-      <div class="fcol rv">
-        <p class="fcol__h">Contact Details</p>
-        <ul class="fcontact">
-          <li><svg><use href="#i-phone"/></svg><a href="tel:+919876543210"><b>+91 98765 43210</b></a></li>
-          <li><svg><use href="#i-mail"/></svg><a href="mailto:hello@acespaces.in">hello@acespaces.in</a></li>
-          <li><svg><use href="#i-pin"/></svg>IT City, Mohali</li>
-          <li><svg><use href="#i-pin"/></svg>PR-7, Zirakpur</li>
-          <li><svg><use href="#i-clock"/></svg>Mon–Sat · 9 AM – 8 PM</li>
-        </ul>
-      </div>
-      <div class="fcol rv">
-        <p class="fcol__h">Connect With Us</p>
-        <ul class="fsocial">
-          <li><a href="https://www.instagram.com/acespaces.in/" target="_blank" rel="noopener"><span><svg><use href="#i-insta"/></svg></span>Instagram</a></li>
-          <li><a href="#" target="_blank" rel="noopener"><span><svg><use href="#i-in"/></svg></span>LinkedIn</a></li>
-          <li><a href="#" target="_blank" rel="noopener"><span><svg><use href="#i-fb"/></svg></span>Facebook</a></li>
-          <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="js-wa"><span><svg><use href="#i-wa"/></svg></span>WhatsApp</a></li>
-        </ul>
-        <button type="button" class="fvisit js-open-visit"><svg><use href="#i-cal"/></svg>Schedule a Visit<span class="btn__dot"><svg><use href="#i-arrow"/></svg></span></button>
-      </div>
+  <div style="position: absolute; left: 417px; top: 106px; font-size: 15.5px; line-height: 22px; font-weight: 700; letter-spacing: 0.4px; color: #fff">LET’S GET STARTED</div>
+  <h2 style="position: absolute; left: 362px; top: 132px; margin: 0; font-size: 44.5px; line-height: 45px; font-weight: 800; font-style: italic; letter-spacing: -0.8px; white-space: nowrap; color: #fff">Ready to find your<br><span style="color: #f0141f">ideal workspace?</span></h2>
+  <p style="position: absolute; left: 363px; top: 233px; margin: 0; font-size: 17.5px; line-height: 23.5px; letter-spacing: -0.3px; white-space: nowrap; color: #f1eff4">Join a vibrant, professional community at ACE Spaces.<br>Flexible workspaces, world-class amenities, and prime locations.</p>
+  <a href="#faq" style="position: absolute; left: 364px; top: 304px; width: 224px; height: 51px; border-radius: 26px; display: flex; align-items: center; padding-left: 36px; box-sizing: border-box; font-size: 20px; font-weight: 700; letter-spacing: -0.5px; color: #fff">Book a Tour</a>
+  <a href="#pricing" style="position: absolute; left: 613px; top: 304px; width: 237px; height: 51px; border-radius: 26px; display: flex; align-items: center; padding-left: 26px; box-sizing: border-box; font-size: 20px; font-weight: 700; letter-spacing: -0.5px; color: #fff">Request a Quote</a>
+
+  <img src="assets/images/mark.png" alt="" style="position: absolute; left: 288px; top: 435px; width: 66px; height: 64px">
+  <img src="assets/images/wordmark-white.png" alt="ACE Spaces" style="position: absolute; left: 286px; top: 503px; width: 188px; height: 32px">
+  <p style="position: absolute; left: 285px; top: 552px; margin: 0; font-size: 20px; line-height: 24.5px; letter-spacing: -0.4px; white-space: nowrap; color: #fff">A premium coworking space<br>for professionals, entrepreneurs,<br>and growing teams.</p>
+  <div style="position: absolute; left: 325px; top: 645px; font-size: 19px; line-height: 25.5px; font-weight: 700; letter-spacing: -0.5px; white-space: nowrap">Premium Coworking in<br>Mohali &amp; Zirakpur.</div>
+  <h3 style="position: absolute; left: 627px; top: 432px; margin: 0; font-size: 22px; line-height: 30px; font-weight: 700; letter-spacing: -0.6px; white-space: nowrap; color: #fff">Quick Links</h3>
+  <h3 style="position: absolute; left: 831px; top: 432px; margin: 0; font-size: 22px; line-height: 30px; font-weight: 700; letter-spacing: -0.6px; white-space: nowrap; color: #fff">Workspace Options</h3>
+  <h3 style="position: absolute; left: 1119px; top: 432px; margin: 0; font-size: 22px; line-height: 30px; font-weight: 700; letter-spacing: -0.6px; white-space: nowrap; color: #fff">Contact Details</h3>
+  <h3 style="position: absolute; left: 1421px; top: 432px; margin: 0; font-size: 22px; line-height: 30px; font-weight: 700; letter-spacing: -0.6px; white-space: nowrap; color: #fff">Connect With Us</h3>
+  <a href="#home" style="position: absolute; left: 660px; top: 492px; font-size: 16.5px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Home</a>
+  <a href="#why" style="position: absolute; left: 660px; top: 522px; font-size: 16.5px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #fff">About Us</a>
+  <a href="#spaces" style="position: absolute; left: 660px; top: 552px; font-size: 16.5px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Spaces</a>
+  <a href="#pricing" style="position: absolute; left: 660px; top: 583px; font-size: 16.5px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Membership</a>
+  <a href="#locations" style="position: absolute; left: 660px; top: 613px; font-size: 16.5px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Locations</a>
+  <a href="#amenities" style="position: absolute; left: 660px; top: 644px; font-size: 16.5px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Amenities</a>
+  <a href="#faq" style="position: absolute; left: 660px; top: 674px; font-size: 16.5px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #fff">FAQs</a>
+  <a href="#contact" style="position: absolute; left: 660px; top: 704px; font-size: 16.5px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Contact</a>
+  <a href="#pricing" style="position: absolute; left: 901px; top: 496px; font-size: 17px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Day Pass</a>
+  <a href="#pricing" style="position: absolute; left: 901px; top: 546px; font-size: 17px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Dedicated Desk</a>
+  <a href="#pricing" style="position: absolute; left: 901px; top: 596px; font-size: 17px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Private Cabin</a>
+  <a href="#pricing" style="position: absolute; left: 901px; top: 646px; font-size: 17px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Meeting Room</a>
+  <a href="#faq" style="position: absolute; left: 901px; top: 696px; font-size: 17px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Book a Visit</a>
+  <a href="tel:+919876543210" style="position: absolute; left: 1172px; top: 491px; font-size: 17.5px; line-height: 24px; font-weight: 700; letter-spacing: -0.3px; white-space: nowrap; color: #fff">+91 98765 43210</a>
+  <a href="mailto:hello@acespaces.in" style="position: absolute; left: 1176px; top: 545px; font-size: 17.5px; line-height: 24px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap; color: #fff">hello@acespaces.in</a>
+  <div style="position: absolute; left: 1177px; top: 591px; font-size: 17.5px; line-height: 24px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap; color: #fff">IT City, Mohali</div>
+  <div style="position: absolute; left: 1177px; top: 641px; font-size: 17.5px; line-height: 24px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap; color: #fff">PR-7, Zirakpur</div>
+  <div style="position: absolute; left: 1178px; top: 691px; font-size: 17.5px; line-height: 24px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Mon-Sat · 9 AM – 8 PM</div>
+  <a href="#" style="position: absolute; left: 1490px; top: 487px; font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Instagram</a>
+  <a href="#" style="position: absolute; left: 1490px; top: 527px; font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap; color: #fff">LinkedIn</a>
+  <a href="#" style="position: absolute; left: 1490px; top: 567px; font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap; color: #fff">Facebook</a>
+  <a href="#" style="position: absolute; left: 1490px; top: 608px; font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: -0.3px; white-space: nowrap; color: #fff">WhatsApp</a>
+  <a href="#faq" style="position: absolute; left: 1407px; top: 663px; width: 260px; height: 65px; border-radius: 14px; display: flex; align-items: center; padding-left: 67px; box-sizing: border-box; font-size: 18.5px; font-weight: 700; letter-spacing: -0.5px; white-space: nowrap; color: #fff">Schedule a Visit</a>
+  <div style="position: absolute; left: 281px; top: 835px; font-size: 17.5px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #ebe9ef">© <span class="js-year">2026</span> ACE Spaces. All rights reserved.</div>
+  <a href="#" style="position: absolute; left: 1206px; top: 835px; font-size: 17.5px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #ebe9ef">Privacy Policy</a>
+  <a href="#" style="position: absolute; left: 1376px; top: 835px; font-size: 17.5px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #ebe9ef">Terms &amp; Conditions</a>
+  <a href="#" style="position: absolute; left: 1581px; top: 835px; font-size: 17.5px; line-height: 24px; font-weight: 400; letter-spacing: -0.3px; white-space: nowrap; color: #ebe9ef">Sitemap</a>
+</div>
     </div>
   </div>
-  <div class="fwave" aria-hidden="true"></div>
-  <div class="wrap fbar">
-    <span>© <span id="yr">2025</span> ACE Spaces. All rights reserved.</span>
-    <span class="fbar__links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#">Sitemap</a></span>
+  <div class="fluid">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div class="cta-copy">
+        <p class="eyebrow eyebrow-white"><span class="eyebrow-line"></span>LET’S GET STARTED</p>
+        <h2 class="h2 h2-light h2-italic">Ready to find your<br><span class="text-red">ideal workspace?</span></h2>
+        <p>Join a vibrant, professional community at ACE Spaces. Flexible workspaces, world-class amenities, and prime locations.</p>
+        <div class="btn-row">
+          <a href="#visit" class="btn btn-red btn-pill btn-shine">Book a Tour <span class="btn-circle"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+          <a href="#pricing" class="btn btn-outline-gold btn-pill">Request a Quote <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="cta-photo"><img src="assets/images/cta-lounge.jpg" alt="ACE Spaces lounge with sofa and red ottomans" loading="lazy" width="655" height="300"></div>
+    </div>
+
+    <div class="footer-grid">
+      <div class="f-brand reveal">
+        <img src="assets/images/mark.png" alt="" width="66" height="64">
+        <img src="assets/images/wordmark-white.png" alt="ACE Spaces" class="f-word" width="188" height="32">
+        <p>A premium coworking space for professionals, entrepreneurs, and growing teams.</p>
+        <p class="f-loc"><svg class="ic ic-red"><use href="#i-pin"/></svg><strong>Premium Coworking in<br>Mohali &amp; Zirakpur.</strong></p>
+      </div>
+      <nav class="f-col reveal" data-delay="1" aria-label="Quick links">
+        <h3>Quick Links</h3>
+        <ul class="f-links">
+          <li><a href="#home">Home</a></li><li><a href="#why">About Us</a></li><li><a href="#spaces">Spaces</a></li><li><a href="#pricing">Membership</a></li>
+          <li><a href="#locations">Locations</a></li><li><a href="#amenities">Amenities</a></li><li><a href="#faq">FAQs</a></li><li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="f-col reveal" data-delay="2">
+        <h3>Workspace Options</h3>
+        <ul class="f-icons">
+          <li><a href="#pricing"><span class="tile tile-dark tile-sm"><svg class="ic"><use href="#i-calendar"/></svg></span>Day Pass</a></li>
+          <li><a href="#pricing"><span class="tile tile-dark tile-sm"><svg class="ic"><use href="#i-desk"/></svg></span>Dedicated Desk</a></li>
+          <li><a href="#pricing"><span class="tile tile-dark tile-sm"><svg class="ic"><use href="#i-door"/></svg></span>Private Cabin</a></li>
+          <li><a href="#pricing"><span class="tile tile-dark tile-sm"><svg class="ic"><use href="#i-users"/></svg></span>Meeting Room</a></li>
+          <li><a href="#visit"><span class="tile tile-dark tile-sm"><svg class="ic"><use href="#i-calendar-star"/></svg></span>Book a Visit</a></li>
+        </ul>
+      </div>
+      <div class="f-col reveal" data-delay="3">
+        <h3>Contact Details</h3>
+        <ul class="f-contact">
+          <li><svg class="ic ic-red"><use href="#i-phone"/></svg><a href="tel:+919876543210"><strong>+91 98765 43210</strong></a></li>
+          <li><svg class="ic ic-red"><use href="#i-mail"/></svg><a href="mailto:hello@acespaces.in">hello@acespaces.in</a></li>
+          <li><svg class="ic ic-red"><use href="#i-pin"/></svg>IT City, Mohali</li>
+          <li><svg class="ic ic-red"><use href="#i-pin"/></svg>PR-7, Zirakpur</li>
+          <li><svg class="ic ic-red"><use href="#i-clock"/></svg>Mon-Sat · 9 AM – 8 PM</li>
+        </ul>
+      </div>
+      <div class="f-col reveal" data-delay="4">
+        <h3>Connect With Us</h3>
+        <ul class="f-social">
+          <li><a href="#" aria-label="Instagram"><span class="tile tile-dark tile-sm"><svg class="ic"><use href="#i-instagram"/></svg></span>Instagram</a></li>
+          <li><a href="#" aria-label="LinkedIn"><span class="tile tile-dark tile-sm"><svg class="ic"><use href="#i-linkedin"/></svg></span>LinkedIn</a></li>
+          <li><a href="#" aria-label="Facebook"><span class="tile tile-dark tile-sm"><svg class="ic"><use href="#i-facebook"/></svg></span>Facebook</a></li>
+          <li><a href="#" aria-label="WhatsApp"><span class="tile tile-dark tile-sm"><svg class="ic"><use href="#i-whatsapp"/></svg></span>WhatsApp</a></li>
+        </ul>
+        <a href="#visit" class="f-visit"><svg class="ic ic-red ic-lg"><use href="#i-calendar"/></svg>Schedule a Visit<span class="btn-circle btn-circle-white"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span class="js-year">2026</span> ACE Spaces. All rights reserved.</p>
+      <ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Sitemap</a></li></ul>
+    </div>
+  </div>
+  <div class="swoosh swoosh-red swoosh-footer" aria-hidden="true"></div>
   </div>
 </footer>
 
-<!-- ================= VISIT / QUOTE MODAL ================= -->
-<div class="modal" id="modal" aria-hidden="true">
-  <div class="modal__bg" data-close></div>
-  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
-    <button type="button" class="modal__x" data-close aria-label="Close"><svg><use href="#i-close"/></svg></button>
-    <p class="eyebrow" id="mEyebrow">Book a Visit</p>
-    <h3 id="mTitle">Schedule your <em class="red">free tour</em></h3>
-    <form id="leadForm" novalidate>
-      <div class="f2">
-        <label>Name<input name="name" required autocomplete="name"></label>
-        <label>Phone<input name="phone" type="tel" required autocomplete="tel" placeholder="+91 98xxx xxxxx"></label>
-      </div>
-      <label>Email<input name="email" type="email" autocomplete="email"></label>
-      <div class="f2">
-        <label>Location<select name="location"><option>Mohali (IT City)</option><option>Zirakpur (PR-7)</option><option>Either</option></select></label>
-        <label>Plan<select name="plan" id="mPlan"><option>Day Pass</option><option>Dedicated Desk</option><option>Private Cabin</option><option>Meeting Room</option><option>Custom Plan</option><option>General</option></select></label>
-      </div>
-      <label>Message (optional)<textarea name="message" rows="3"></textarea></label>
-      <p class="form-err" id="fErr" role="alert"></p>
-      <button type="submit" class="btn btn--redpill btn--block">Send on WhatsApp<span class="btn__dot"><svg><use href="#i-arrow"/></svg></span></button>
-      <p class="form-note">We'll reply within working hours. Or call <a href="tel:+919876543210">+91 98765 43210</a>.</p>
-    </form>
-  </div>
-</div>
+<a href="#home" class="to-top" id="toTop" aria-label="Back to top"><svg class="ic"><use href="#i-up"/></svg></a>
 
-<!-- Video modal -->
-<div class="modal" id="vmodal" aria-hidden="true">
-  <div class="modal__bg" data-close></div>
-  <div class="modal__box modal__box--video" role="dialog" aria-modal="true" aria-label="Virtual tour">
-    <button type="button" class="modal__x" data-close aria-label="Close"><svg><use href="#i-close"/></svg></button>
-    <div class="video-ph" style="background-image:url(images/hero-reception.jpg)"><span><svg><use href="#i-play"/></svg>Tour video coming soon — add your YouTube link in js/main.js</span></div>
-  </div>
-</div>
-
-<!-- Mobile quick bar -->
-<nav class="qbar" aria-label="Quick actions">
-  <a href="tel:+919876543210"><svg><use href="#i-phone"/></svg>Call</a>
-  <a href="https://wa.me/919876543210" class="js-wa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
-  <a href="#" class="qbar__red js-open-visit">Book a Tour</a>
-</nav>
-
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-<script src="js/main.js"></script>
-<script src="js/wow.js"></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
