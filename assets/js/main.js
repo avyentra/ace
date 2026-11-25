@@ -63,8 +63,10 @@
     if (!target.offsetParent && target !== doc.body) target = target.closest('section, footer') || target;
     e.preventDefault();
     setMenu(false);
-    var top = target.getBoundingClientRect().top + window.pageYOffset - (header.offsetHeight - 10);
-    window.scrollTo({ top: id === '#home' ? 0 : top, behavior: reduceMotion ? 'auto' : 'smooth' });
+    var top = target.getBoundingClientRect().top + window.pageYOffset - header.offsetHeight;
+    if (id === '#home') top = 0;
+    if (window.aceScrollTo) window.aceScrollTo(top);
+    else window.scrollTo({ top: top, behavior: reduceMotion ? 'auto' : 'smooth' });
     history.replaceState(null, '', id);
   });
 
@@ -229,6 +231,92 @@
       });
     });
   });
+
+  /* ---------- Section-by-section scrolling (desktop) ----------
+     One wheel / PageUp / PageDown / arrow step moves a whole section.
+     A section taller than the screen is shown in two steps (top, then
+     bottom) so nothing is ever skipped. Phones keep normal scrolling. */
+  (function () {
+    var mq = window.matchMedia('(min-width: 1100px)');
+    var sections = Array.prototype.slice.call(doc.querySelectorAll('main > section, body > footer'));
+    var animating = false, lastEnd = 0, lastWheel = 0;
+    var GAP = 2;
+    var MIN_REST = 160; // a hidden remainder smaller than this (mostly section padding) is not worth its own step
+
+    function headerH() { return header.offsetHeight; }
+    function topOf(el) { return el.getBoundingClientRect().top + window.pageYOffset; }
+    function maxScroll() { return doc.documentElement.scrollHeight - window.innerHeight; }
+
+    function easeInOut(t) { return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+    function animateTo(y) {
+      y = Math.max(0, Math.min(maxScroll(), Math.round(y)));
+      var from = window.pageYOffset, dist = y - from;
+      if (Math.abs(dist) < 2) return false;
+      var dur = Math.min(1000, 550 + Math.abs(dist) * 0.25), start = null;
+      animating = true;
+      function step(ts) {
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        window.scrollTo({ top: from + dist * easeInOut(p), behavior: 'instant' });
+        if (p < 1) requestAnimationFrame(step);
+        else { animating = false; lastEnd = performance.now(); }
+      }
+      requestAnimationFrame(step);
+      return true;
+    }
+
+    // where should a step in direction dir (1 = down, -1 = up) land?
+    function targetFor(dir) {
+      var y = window.pageYOffset, view = window.innerHeight, hh = headerH();
+      var viewTop = y + hh, viewBottom = y + view;
+      // section whose area contains the top edge of the visible area
+      var idx = 0;
+      sections.forEach(function (s, i) { if (topOf(s) <= viewTop + GAP) idx = i; });
+      var cur = sections[idx];
+      var cTop = topOf(cur) - hh, cBottom = topOf(cur) + cur.offsetHeight;
+      if (dir > 0) {
+        if (cBottom > viewBottom + MIN_REST) {
+          // rest of a tall section first
+          return Math.min(cBottom - view, topOf(sections[Math.min(idx + 1, sections.length - 1)]) - hh);
+        }
+        return idx < sections.length - 1 ? topOf(sections[idx + 1]) - hh : maxScroll();
+      }
+      if (y > cTop + GAP) return cTop;                     // back to the top of this section
+      if (idx === 0) return 0;
+      var prev = sections[idx - 1];
+      var pTop = topOf(prev) - hh, pBottom = topOf(prev) + prev.offsetHeight;
+      return (pBottom - (pTop + view) > MIN_REST) ? pBottom - view : pTop; // much taller previous section: show its end first
+    }
+
+    function modalOpen() { return !!doc.querySelector('.bk-modal.is-open'); }
+    function enabled() { return mq.matches && !reduceMotion && !nav.classList.contains('is-open') && !modalOpen(); }
+    // let other scripts (menu links) use the same smooth motion
+    window.aceScrollTo = function (y) { if (enabled()) return animateTo(y); window.scrollTo({ top: y, behavior: reduceMotion ? 'auto' : 'smooth' }); return true; };
+
+    window.addEventListener('wheel', function (e) {
+      if (!enabled() || e.ctrlKey || Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
+      e.preventDefault();
+      var now = performance.now();
+      var quiet = now - lastWheel; lastWheel = now;
+      // ignore the tail of a trackpad / momentum gesture
+      if (animating || now - lastEnd < 450 || (quiet < 60 && now - lastEnd < 900) || Math.abs(e.deltaY) < 3) return;
+      animateTo(targetFor(e.deltaY > 0 ? 1 : -1));
+    }, { passive: false });
+
+    doc.addEventListener('keydown', function (e) {
+      if (!enabled() || e.altKey || e.ctrlKey || e.metaKey) return;
+      var t = e.target;
+      if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+      var dir = 0;
+      if (e.key === 'PageDown' || e.key === 'ArrowDown' || (e.key === ' ' && !e.shiftKey && t.tagName !== 'BUTTON' && t.tagName !== 'A')) dir = 1;
+      if (e.key === 'PageUp' || e.key === 'ArrowUp' || (e.key === ' ' && e.shiftKey)) dir = -1;
+      if (e.key === 'Home') { e.preventDefault(); if (!animating) animateTo(0); return; }
+      if (e.key === 'End') { e.preventDefault(); if (!animating) animateTo(maxScroll()); return; }
+      if (!dir) return;
+      e.preventDefault();
+      if (!animating) animateTo(targetFor(dir));
+    });
+  })();
 
   /* ---------- Desktop testimonial slider (3 slots, centre = featured) ---------- */
   var xs = doc.getElementById('xSlider');

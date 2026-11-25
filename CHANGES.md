@@ -30,3 +30,10 @@ The form sends the details to WhatsApp. The mobile layout uses the same form, bi
 
 ## Edit before going live
 At the top of `assets/js/interactions.js`, set `CONFIG`: WhatsApp number, phone, the two Google Maps links, and the LinkedIn and Facebook URLs. Until those two are filled in, clicking them shows "coming soon".
+
+## Section-by-section scrolling (desktop)
+- One mouse-wheel / touchpad swipe, PageUp/PageDown, ↑/↓ or Space moves exactly one section, with a smooth ease-in-out slide (about 0.6–1 s). Home / End jump to the top / bottom.
+- A section taller than the screen is shown in two steps (top, then bottom), so no content is skipped.
+- Menu links and the "go to plan" links in `interactions.js` use the same smooth motion.
+- Paused while the booking form is open; phones and tablets (under 1100px) and "reduce motion" users keep normal scrolling.
+- Code: `assets/js/main.js` → "Section-by-section scrolling". `interactions.js` → `scrollToEl()` now uses it.

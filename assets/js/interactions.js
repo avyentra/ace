@@ -130,7 +130,8 @@
   function scrollToEl(el) {
     var header = doc.getElementById('siteHeader');
     var top = el.getBoundingClientRect().top + window.pageYOffset - (header ? header.offsetHeight : 0) - 10;
-    window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
+    if (window.aceScrollTo) window.aceScrollTo(top);
+    else window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
   }
 
   /* =========================================================
